@@ -1,0 +1,72 @@
+@import "../../styles/variables.scss";
+
+.sub {
+    &Menu {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: min(100% - 30px, 1400px);
+        margin-inline: auto;
+    }
+
+    &Item {
+        display: flex;
+        flex-direction: column;
+        margin: 0 0 0 1rem;
+        border-right: 0.0625rem solid rgba(236, 231, 225, 0.16);
+        padding: 1rem 1rem 0 0;
+
+        &:nth-child(even) {
+            border-right: none;
+        }
+
+        &:last-child {
+            padding: 1rem 1rem 1rem 0;
+        }
+    }
+
+    &Btn {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        font-weight: 500;
+        font-size: 1.375rem;
+        text-transform: uppercase;
+        letter-spacing: -0.04rem;
+        color: map-get($color, "primary");
+        background: transparent;
+        margin: 0 0 0.5rem 0;
+        opacity: 0.85;
+        @extend %transition;
+
+        &::after {
+            content: "\1F873";
+            display: block;
+            font-size: 1rem;
+        }
+    }
+}
+
+.active {
+    opacity: 1;
+
+    &::after {
+        transform: rotate(-90deg);
+        transition: transform 0.3s ease-in-out;
+    }
+}
+
+.nestedSub {
+    &Menu {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    &Link {
+        font-weight: 400;
+        font-size: 1rem;
+        color: map-get($color, "primary");
+    }
+}

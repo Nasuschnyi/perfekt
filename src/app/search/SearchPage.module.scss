@@ -1,0 +1,15 @@
+@import "../../styles/variables.scss";
+
+.header {
+    display: flex;
+    flex-direction: column;
+    background: map-get($color, "green");
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: min(100% - 30px, 1600px);
+    margin-inline: auto;
+}

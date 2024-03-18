@@ -1,0 +1,21 @@
+@import "../../../styles/variables.scss";
+
+.loader {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: map-get($color, "green");
+    @extend %transition;
+    animation: loading-anim 1s ease-in-out;
+}
+
+@keyframes loading-anim {
+    0% {
+        top: -100%;
+    }
+
+    100% {
+        top: 0;
+    }
+}

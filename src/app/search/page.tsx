@@ -1,10 +1,9 @@
 'use client';
-import '../styles/globals.css';
 import Loader from '@/components/UI/Loader/Loader';
-import Homepage from './Homepage/Homepage';
 import { useEffect, useState } from 'react';
+import SearchPage from './SearchPage';
 
-export default function App() {
+export default function Search() {
 	const [loading, setLoading] = useState(true);
 
 	useEffect(() => {
@@ -12,5 +11,5 @@ export default function App() {
 		return () => clearTimeout(timer);
 	}, []);
 
-	return loading ? <Loader /> : <Homepage />;
+	return loading ? <Loader /> : <SearchPage />;
 }

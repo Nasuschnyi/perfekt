@@ -1,0 +1,11 @@
+@import "../../../styles/variables.scss";
+
+.logo {
+    display: flex;
+    flex-direction: column;
+
+    svg {
+        height: 6rem;
+        fill: map-get($color, "primary");
+    }
+}

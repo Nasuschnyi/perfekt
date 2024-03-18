@@ -1,0 +1,50 @@
+@import "../../../../styles/variables.scss";
+
+.search {
+    position: relative;
+    @extend %flex;
+    padding: 0.5rem 1rem 0.5rem 2rem;
+    font-weight: 400;
+    font-size: 1.25rem;
+    color: map-get($color, "dark");
+    background: map-get($color, "primary");
+    border-radius: 1.5rem;
+    min-height: 40px;
+    width: 100%;
+
+    &::before {
+        content: "\1F50D";
+        font-size: 1.5rem;
+        position: absolute;
+        left: 0.5rem;
+        top: 0;
+        display: block;
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+
+    &::placeholder {
+        color: map-get($color, "dark");
+        opacity: 0.8;
+    }
+
+    &Form {
+        position: relative;
+        display: flex;
+        width: 100%;
+    }
+}
+
+.reset {
+    position: absolute;
+    right: 3.75rem;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-bottom: 0.0625rem solid map-get($color, "dark");
+    background: transparent;
+
+    &:is(:hover, :active) {
+        opacity: 0.8;
+        @extend %transition;
+    }
+}

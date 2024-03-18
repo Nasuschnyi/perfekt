@@ -1,0 +1,21 @@
+@import "../../styles/variables.scss";
+
+.about {
+    svg {
+        fill: transparent;
+        height: 2.875rem;
+        stroke: map-get($color, "primary");
+        transition: all 0.5s ease-in-out;
+    }
+
+    &:is(:hover, :active) {
+        svg {
+            opacity: 0.7;
+
+            & path:last-child {
+                stroke: map-get($color, "red");
+                transition: all 0.8s ease-in-out;
+            }
+        }
+    }
+}

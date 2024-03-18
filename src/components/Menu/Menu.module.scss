@@ -1,0 +1,62 @@
+@import "../../styles/variables.scss";
+
+.menu {
+    position: relative;
+    @extend %flex;
+    flex-wrap: wrap;
+    gap: 1rem 2rem;
+    border-bottom: 0.0625rem solid rgba(236, 231, 225, 0.16);
+}
+
+.button {
+    @extend %flex;
+    gap: 1rem;
+    padding: 0.5rem;
+    font-weight: 500;
+    font-size: 1rem;
+    color: map-get($color, "primary");
+    text-transform: uppercase;
+    background: transparent;
+    opacity: 0.85;
+    transition: all 0.5s ease-in-out;
+
+    &::after {
+        content: "\1F873";
+        display: block;
+        font-size: 0.75rem;
+    }
+}
+
+.active {
+    opacity: 1;
+
+    &::after {
+        transform: rotate(-180deg);
+        transition: transform 0.5s ease-in-out;
+    }
+}
+
+.sub {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: map-get($color, "green");
+    border-top: 0.0625rem solid rgba(236, 231, 225, 0.16);
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@include tablet {
+    .nav {
+        display: none;
+    }
+}
