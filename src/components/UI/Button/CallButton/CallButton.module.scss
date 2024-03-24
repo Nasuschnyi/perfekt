@@ -5,10 +5,6 @@
     height: 2.1875rem;
     background: transparent;
 
-    &:is(:hover, :active) {
-        opacity: 0.8;
-    }
-
     svg {
         height: 100%;
         fill: map-get($color, "primary");
@@ -45,4 +41,12 @@
     color: map-get($color, "dark");
     font-weight: 600;
     font-size: 1.125rem;
+}
+
+@include tablet {
+    .list {
+        &::before {
+            left: 30%;
+        }
+    }
 }

@@ -43,6 +43,7 @@ body {
   -webkit-text-size-adjust: 100%;
   background: #ece7e1;
   font-family: "Montserrat", sans-serif;
+  min-width: 23.4375rem;
   overflow: hidden;
 }
 
