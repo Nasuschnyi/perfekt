@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import style from './SubMenu.module.scss';
 import data from './data';
-import React, { useState } from 'react';
+import React from 'react';
 
 interface SubItem {
 	id: number;

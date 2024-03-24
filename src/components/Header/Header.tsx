@@ -5,8 +5,11 @@ import Logo from '../UI/Logo/Logo';
 import SearchBar from '../UI/Input/SearchBar/SearchBar';
 import CallButton from '../UI/Button/CallButton/CallButton';
 import Burger from '../UI/Button/Burger/Burger';
+import React from 'react';
 
 const Header = () => {
+	const [isBurgerActive, setBurgerActive] = React.useState(false);
+
 	return (
 		<header className={style.header}>
 			<div className={style.container}>
@@ -14,9 +17,9 @@ const Header = () => {
 				<SearchBar />
 				<CallButton />
 				<About />
-				<Burger />
+				<Burger setIsActive={setBurgerActive} />
 			</div>
-			<Menu />
+			<Menu isBurgerActive={isBurgerActive} />
 		</header>
 	);
 };

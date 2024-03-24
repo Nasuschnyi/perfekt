@@ -1,10 +1,15 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import style from './Burger.module.scss';
 
-export default function Burger() {
-	const [isActive, setIsActive] = useState(false);
+type BurgerProps = {
+	setIsActive: (isActive: boolean) => void;
+};
+
+const Burger = ({ setIsActive }: BurgerProps) => {
+	const [isActive, setIsActiveState] = React.useState(false);
 
 	const handleClick = () => {
+		setIsActiveState(!isActive);
 		setIsActive(!isActive);
 	};
 
@@ -20,4 +25,6 @@ export default function Burger() {
 			</div>
 		</button>
 	);
-}
+};
+
+export default Burger;

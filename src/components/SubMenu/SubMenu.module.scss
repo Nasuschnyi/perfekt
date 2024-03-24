@@ -2,7 +2,6 @@
 
 .sub {
     &Menu {
-        position: relative;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         width: min(100% - 30px, 1400px);
@@ -31,7 +30,7 @@
         justify-content: space-between;
         width: 100%;
         font-weight: 500;
-        font-size: 1.375rem;
+        font-size: 1.5rem;
         text-transform: uppercase;
         letter-spacing: -0.04rem;
         color: map-get($color, "primary");
@@ -43,7 +42,13 @@
         &::after {
             content: "\1F873";
             display: block;
-            font-size: 1rem;
+            font-size: 0.875rem;
+            @extend %transition;
+        }
+
+        &:is(:hover, :active) {
+            opacity: 1;
+            @extend %transition;
         }
     }
 }
@@ -53,7 +58,8 @@
 
     &::after {
         transform: rotate(-90deg);
-        transition: transform 0.3s ease-in-out;
+        color: map-get($color, "red");
+        @extend %transition;
     }
 }
 
@@ -64,9 +70,55 @@
         gap: 0.5rem;
     }
 
+    &Item {
+        display: flex;
+    }
+
     &Link {
+        padding: 0.25rem 0.25rem 0.25rem 0;
         font-weight: 400;
-        font-size: 1rem;
+        font-size: 1.125rem;
         color: map-get($color, "primary");
+        opacity: 0.85;
+        @extend %transition;
+
+        &:is(:hover, :active) {
+            opacity: 1;
+            @extend %transition;
+        }
+    }
+}
+
+@include laptop {
+    .sub {
+        &Menu {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        &Item {
+            border: none;
+        }
+
+        &Btn {
+            font-size: 2rem;
+
+            &::after {
+                font-size: 1rem;
+            }
+        }
+    }
+
+    .nestedSub {
+        &Link {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+@include tablet {
+    .sub {
+        &Btn {
+            font-size: 1.25rem;
+        }
     }
 }

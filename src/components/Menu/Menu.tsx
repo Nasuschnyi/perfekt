@@ -5,11 +5,15 @@ import menuList from './data';
 import SubMenu from '../SubMenu/SubMenu';
 import data from '../SubMenu/data';
 
-const Menu: React.FC = () => {
+const Menu = ({ isBurgerActive }: { isBurgerActive: boolean }) => {
 	const [selectedItem, setSelectedItem] = React.useState<number | null>(null);
 
 	return (
-		<nav className={style.nav}>
+		<nav
+			className={
+				isBurgerActive ? `${style.nav} ${style.active}` : style.nav
+			}
+		>
 			<menu className={style.menu}>
 				{menuList.map((item) => (
 					<li key={item.id} className={style.item}>
