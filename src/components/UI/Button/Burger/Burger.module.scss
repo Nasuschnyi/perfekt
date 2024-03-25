@@ -76,7 +76,7 @@
                 top 0.1s cubic-bezier(0.33333, 0, 0.66667, 0.33333) 0.15s,
                 transform 0.13s cubic-bezier(0.215, 0.61, 0.355, 1) 0.22s;
             transform: translate3d(0, 10px, 0) rotate(45deg);
-            background: map-get($color, "primary");
+            background: map-get($color, "red");
         }
 
         &::after {
@@ -85,7 +85,7 @@
                 top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333),
                 transform 0.13s cubic-bezier(0.215, 0.61, 0.355, 1) 0.22s;
             transform: translate3d(0, 10px, 0) rotate(-45deg);
-            background: map-get($color, "primary");
+            background: map-get($color, "red");
         }
     }
 }

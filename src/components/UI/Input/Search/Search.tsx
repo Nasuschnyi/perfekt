@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import SearchButtonClose from '../../Button/SearchButtonClose/SearchButtonClose';
 import style from './Search.module.scss';
+import { FiSearch } from 'react-icons/fi';
 
 const Search: React.FC = () => {
 	const [searchQuery, setSearchQuery] = useState('');
@@ -20,6 +21,7 @@ const Search: React.FC = () => {
 
 	return (
 		<form className={style.searchForm}>
+			<FiSearch className={style.searchIcon} />
 			<input
 				className={style.search}
 				type="text"

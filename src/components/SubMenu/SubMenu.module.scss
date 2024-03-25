@@ -68,6 +68,7 @@
         display: flex;
         flex-direction: column;
         gap: 0.5rem;
+        animation: fadeIn 0.3s ease-in-out forwards;
     }
 
     &Item {
@@ -97,6 +98,12 @@
 
         &Item {
             border: none;
+            margin: 0;
+            padding: 1rem 0 0;
+
+            &:last-child {
+                padding: 1rem 0 1rem;
+            }
         }
 
         &Btn {
