@@ -50,3 +50,12 @@
         }
     }
 }
+
+@keyframes fade-in-custom {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
