@@ -2,6 +2,7 @@ import Link from 'next/link';
 import style from './SubMenu.module.scss';
 import data from './data';
 import React from 'react';
+import { IoMdArrowRoundDown } from 'react-icons/io';
 
 interface SubItem {
 	id: number;
@@ -53,6 +54,7 @@ const SubMenu: React.FC<SubMenuProps> = ({ data, id }) => {
 								onClick={() => toggleNestedSubMenu(id)}
 							>
 								{item.title}
+								<IoMdArrowRoundDown />
 							</button>
 							{openSubItem === id && (
 								<ul className={style.nestedSubMenu}>

@@ -12,17 +12,6 @@
     min-height: 40px;
     width: 100%;
 
-    &::before {
-        content: "\1F50D";
-        font-size: 1.5rem;
-        position: absolute;
-        left: 0.5rem;
-        top: 0;
-        display: block;
-        height: 1.5rem;
-        width: 1.5rem;
-    }
-
     &::placeholder {
         color: map-get($color, "dark");
         opacity: 0.8;
@@ -64,7 +53,7 @@
 @include mobile {
     .search {
         font-size: 1rem;
-        padding: 0 3.625rem 0 0.5rem;
+        padding: 0 3.625rem 0 1rem;
 
         &Icon {
             display: none;

@@ -39,15 +39,12 @@
         opacity: 0.85;
         @extend %transition;
 
-        &::after {
-            content: "\1F873";
-            display: block;
-            font-size: 0.875rem;
+        &:is(:hover, :active) {
+            opacity: 1;
             @extend %transition;
         }
 
-        &:is(:hover, :active) {
-            opacity: 1;
+        & svg {
             @extend %transition;
         }
     }
@@ -56,7 +53,7 @@
 .active {
     opacity: 1;
 
-    &::after {
+    & svg {
         transform: rotate(-90deg);
         color: map-get($color, "red");
         @extend %transition;
