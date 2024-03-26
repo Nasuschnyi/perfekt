@@ -73,7 +73,7 @@
     }
 
     &Link {
-        padding: 0.3125rem 0.3125rem 0.3125rem 0;
+        padding: 0.5rem 0;
         font-weight: 400;
         font-size: 1.125rem;
         color: map-get($color, "primary");
@@ -130,5 +130,19 @@
         &Link {
             font-size: 1.125rem;
         }
+    }
+}
+
+//About
+
+.about {
+    width: min(100% - 30px, 1600px);
+    margin-inline: auto;
+    color: map-get($color, "primary");
+    opacity: 0.85;
+
+    &Link {
+        color: map-get($color, "primary");
+        @extend %transition;
     }
 }

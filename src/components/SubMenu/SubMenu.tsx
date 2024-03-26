@@ -83,10 +83,28 @@ const SubMenu: React.FC<SubMenuProps> = ({ data, id }) => {
 			break;
 		case 2:
 			content = (
-				<div>
-					<h3>{data.about.details.title}</h3>
-					<p>{data.about.details.description}</p>
-				</div>
+				<section className={style.about}>
+					<h2 className={style.aboutTitle}>
+						{data.about.details.title}
+					</h2>
+					<p className={style.aboutDescription}>
+						<Link
+							className={style.aboutLink}
+							target="_blank"
+							href="https://perfekt.com.ua"
+						>
+							Perfekt.com.ua
+						</Link>
+						{data.about.details.description
+							.split('\n')
+							.map((sentence, index) => (
+								<React.Fragment key={index}>
+									{sentence.trim()}
+									<br />
+								</React.Fragment>
+							))}
+					</p>
+				</section>
 			);
 			break;
 		case 3:
