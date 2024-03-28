@@ -6,14 +6,7 @@ const Main = () => {
 		<main className={style.main}>
 			<section className={style.section}>
 				{images.map((image) => (
-					<img
-						key={image.id}
-						className={`${style.image} ${
-							style[`image-${image.ratio}`]
-						}`}
-						src={image.src}
-						alt={image.alt}
-					/>
+					<img key={image.id}  src={image.src} alt={image.alt} className={`${style.img} ${style[image.ratio]}`}/>
 				))}
 			</section>
 		</main>

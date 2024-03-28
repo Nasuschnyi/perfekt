@@ -8,16 +8,19 @@
     padding: 1rem;
     grid-auto-flow: dense;
 }
-/* 
-.image {
-    object-fit: cover;
-    &-2x1 {
-        grid-row-end: span 1;
-        grid-column-end: span 2;
-    }
 
-    &-2x2 {
-        grid-row-end: span 2;
-        grid-column-end: span 2;
-    }
-} */
+.img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.twenty-one {
+    grid-row-end: span 1;
+    grid-column-end: span 2;
+}
+
+.twenty-two {
+    grid-row-end: span 2;
+    grid-column-end: span 2;
+}
