@@ -65,6 +65,7 @@
         display: flex;
         flex-direction: column;
         gap: 0.5rem;
+        padding: 0 0 0 1rem;
         animation: fadeIn 0.3s ease-in-out forwards;
     }
 
@@ -138,8 +139,16 @@
 .about {
     width: min(100% - 30px, 1600px);
     margin-inline: auto;
+    padding: 1.5rem 0;
     color: map-get($color, "primary");
     opacity: 0.85;
+
+    &Title {
+        font-weight: 500;
+        font-size: 1.5rem;
+        text-align: center;
+        margin: 0 0 1rem 0;
+    }
 
     &Link {
         color: map-get($color, "primary");

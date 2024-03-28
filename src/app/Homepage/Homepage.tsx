@@ -1,14 +1,12 @@
 import Header from '@/components/Header/Header';
 import style from './Homepage.module.scss';
-import Hexagon from '@/components/UI/Hexagon/Hexagon';
+import Main from '@/components/Main/Main';
 
 const Homepage = () => {
 	return (
 		<>
 			<Header />
-			<main className={style.main}>
-				<Hexagon />
-			</main>
+			<Main />
 		</>
 	);
 };
