@@ -5,24 +5,3 @@
     margin-inline: auto;
     padding: 1rem 0;
 }
-
-.title {
-    position: relative;
-    font-weight: 700;
-    font-size: 6vw;
-    text-align: center;
-    color: map-get($color, 'green');
-
-    &::before,
-    &::after {
-        color: map-get($color, 'red');
-    }
-
-    &::before {
-        content: '<';
-    }
-
-    &::after {
-        content: '/>';
-    }
-}

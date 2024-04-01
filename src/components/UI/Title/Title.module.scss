@@ -1,0 +1,26 @@
+@import '../../../styles/variables.scss';  
+
+.title {
+    font-family: "Montserrat Subrayada", sans-serif;
+    font-weight: 700;
+    font-size: 6vw;
+    text-align: center;
+    color: map-get($color, 'dark');
+
+    &::before,
+    &::after {
+        content: '';
+        display: inline-block;
+        font-weight: 700;
+        color: map-get($color, 'red');
+        font-weight: 700;
+    }
+
+    &::before {
+        content: '<';
+    }
+
+    &::after {
+        content: '>';
+    }
+}
