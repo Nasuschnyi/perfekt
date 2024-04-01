@@ -1,26 +1,7 @@
 @import "../../styles/variables.scss";
 
-.section {
-    display: grid;
-    grid-template-rows: repeat(4, 1fr);
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
-    padding: 1rem;
-    grid-auto-flow: dense;
-}
-
-.img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-}
-
-.twenty-one {
-    grid-row-end: span 1;
-    grid-column-end: span 2;
-}
-
-.twenty-two {
-    grid-row-end: span 2;
-    grid-column-end: span 2;
+.main {
+    width: min(100% - 30px, 1400px);
+    margin-inline: auto;
+    padding: 1rem 0;
 }

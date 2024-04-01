@@ -48,6 +48,7 @@
     background: map-get($color, "green");
     border-top: 0.0625rem solid rgba(236, 231, 225, 0.16);
     animation: fadeIn 0.5s ease-in-out forwards;
+    z-index: 3;
 }
 
 @include tablet {

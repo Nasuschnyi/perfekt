@@ -9,7 +9,7 @@ const menuList = [
 	},
 	{
 		id: 3,
-		title: 'Довіз та контакти',
+		title: 'Контакти',
 	},
 ];
 
