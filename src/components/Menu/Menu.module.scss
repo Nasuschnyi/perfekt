@@ -54,6 +54,12 @@
 @include tablet {
     .nav {
         display: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 96px;
+        z-index: 1;
+        background: map-get($color, "green");
 
         &.active {
             display: block;

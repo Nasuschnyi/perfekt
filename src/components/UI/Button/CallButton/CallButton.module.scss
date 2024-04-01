@@ -1,9 +1,11 @@
 @import "../../../../styles/variables.scss";
 
 .call {
+    position: relative;
     @extend %flex;
     height: 2.1875rem;
     background: transparent;
+    z-index: 1000;
 
     svg {
         height: 100%;
@@ -13,8 +15,8 @@
 
 .list {
     position: absolute;
-    top: 4.5rem;
-    right: 0;
+    top: 2.7rem;
+    right: -4rem;
     @extend %flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -45,11 +47,21 @@
 
 @include tablet {
     .list {
+        right: -6rem;
         &::before {
-            left: 30%;
+            left: 40%;
         }
     }
 }
+
+/* @include mobile {
+    .list {
+        right: -8rem;
+        &::before {
+            left: 37%;
+        }
+    }
+} */
 
 @keyframes fade-in-custom {
     from {
