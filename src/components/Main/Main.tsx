@@ -5,6 +5,7 @@ const Main = () => {
 	return (
 		<main className={style.main}>
 			<MainPage/>
+			<h1 className={style.title}>Perfekt</h1>	
 		</main>
 	);
 };

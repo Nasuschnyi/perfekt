@@ -54,15 +54,6 @@
     }
 }
 
-/* @include mobile {
-    .list {
-        right: -8rem;
-        &::before {
-            left: 37%;
-        }
-    }
-} */
-
 @keyframes fade-in-custom {
     from {
         opacity: 0;
