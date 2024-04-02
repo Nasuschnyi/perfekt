@@ -98,6 +98,10 @@ const SubMenu: React.FC<SubMenuProps> = ({ data, id }) => {
 					<div className={style.aboutContent}>
 						<ul className={style.contact}>
 							<li>
+								<IoTime />
+								{data.contact.information.time}
+							</li>
+							<li>
 								<FaLocationDot />
 								{data.contact.information.address}
 							</li>
@@ -112,10 +116,6 @@ const SubMenu: React.FC<SubMenuProps> = ({ data, id }) => {
 								<Link href="mailto:{data.contact.information.email}">
 									{data.contact.information.email}
 								</Link>
-							</li>
-							<li>
-								<IoTime />
-								{data.contact.information.time}
 							</li>
 							<HiShoppingBag className={style.shoppingBag} />
 						</ul>

@@ -1,66 +1,72 @@
 @import "../../../../styles/variables.scss";
 
 .search {
-    position: relative;
-    @extend %flex;
-    padding: 0 4.375rem 0 2rem;
-    font-weight: 400;
-    font-size: 1.25rem;
-    color: map-get($color, "dark");
-    background: map-get($color, "primary");
-    border-radius: 1.5rem;
-    min-height: 40px;
-    width: 100%;
+	position: relative;
+	@extend %flex;
+	padding: 0 3rem 0 2rem;
+	font-weight: 400;
+	font-size: 1.25rem;
+	color: map-get($color, "dark");
+	background: map-get($color, "primary");
+	border-radius: 1.5rem;
+	min-height: 40px;
+	width: 100%;
 
-    &::placeholder {
-        color: map-get($color, "dark");
-        opacity: 0.8;
-    }
+	&::placeholder {
+		color: map-get($color, "dark");
+		opacity: 0.8;
+	}
 
-    &Form {
-        position: relative;
-        display: flex;
-        width: 100%;
-    }
+	&Form {
+		position: relative;
+		display: flex;
+		width: 100%;
+	}
 
-    &Icon {
-        position: absolute;
-        left: 10px;
-        top: 50%;
-        transform: translateY(-50%);
-        font-size: 1.25rem;
-        color: map-get($color, "dark");
-        pointer-events: none;
-        opacity: 0.8;
-        z-index: 1;
-    }
+	&Icon {
+		position: absolute;
+		left: 10px;
+		top: 50%;
+		transform: translateY(-50%);
+		font-size: 1.25rem;
+		color: map-get($color, "dark");
+		pointer-events: none;
+		opacity: 0.8;
+		z-index: 1;
+	}
 }
 
 .reset {
-    position: absolute;
-    right: 3.75rem;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    border-bottom: 0.0625rem solid map-get($color, "dark");
-    background: transparent;
+	position: absolute;
+	right: 2.75rem;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	@extend %flex;
+	height: 100%;
+	background: transparent;
 
-    &:is(:hover, :active) {
-        opacity: 0.8;
-        @extend %transition;
-    }
+	svg {
+		height: 2rem;
+		width: 2rem;
+	}
+
+	&:is(:hover, :active) {
+		opacity: 0.8;
+		@extend %transition;
+	}
 }
 
 @include mobile {
-    .search {
-        font-size: 1rem;
-        padding: 0 3.625rem 0 1rem;
+	.search {
+		font-size: 1rem;
+		padding: 0 2.1875rem 0 1rem;
 
-        &Icon {
-            display: none;
-        }
-    }
+		&Icon {
+			display: none;
+		}
+	}
 
-    .reset {
-        right: 2.5rem;
-    }
+	.reset {
+		right: 1.75rem;
+	}
 }

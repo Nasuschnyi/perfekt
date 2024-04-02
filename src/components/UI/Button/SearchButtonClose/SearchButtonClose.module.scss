@@ -1,31 +1,32 @@
 @import "../../../../styles/variables.scss";
 
 .close {
-    @extend %flex;
-    height: 2.875rem;
-    border-radius: 50%;
-    padding: 0.5rem;
-    background: map-get($color, "primary");
-    margin: 0 0 0 0.5rem;
+	@extend %flex;
+	width: 2.875rem;
+	border-radius: 50%;
+	padding: 0.5rem;
+	background: map-get($color, "primary");
+	margin: 0 0 0 0.5rem;
 
-    svg {
-        fill: map-get($color, "dark");
-        height: 100%;
-    }
+	svg {
+		fill: map-get($color, "dark");
+		height: 100%;
+		width: 100%;
+	}
 
-    &:is(:hover, :active) {
-        opacity: 0.8;
-        @extend %transition;
+	&:is(:hover, :active) {
+		opacity: 0.8;
+		@extend %transition;
 
-        & svg {
-            fill: map-get($color, "red");
-            @extend %transition;
-        }
-    }
+		& svg {
+			fill: map-get($color, "red");
+			@extend %transition;
+		}
+	}
 }
 
 @include tablet {
-    .close {
-        margin: 0;
-    }
+	.close {
+		margin: 0;
+	}
 }

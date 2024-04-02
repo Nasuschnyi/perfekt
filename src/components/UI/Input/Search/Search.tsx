@@ -1,10 +1,11 @@
-import { useState } from 'react';
-import SearchButtonClose from '../../Button/SearchButtonClose/SearchButtonClose';
-import style from './Search.module.scss';
-import { FiSearch } from 'react-icons/fi';
+import { useState } from "react";
+import SearchButtonClose from "../../Button/SearchButtonClose/SearchButtonClose";
+import style from "./Search.module.scss";
+import { FiSearch } from "react-icons/fi";
+import { IoCloseOutline } from "react-icons/io5";
 
 const Search: React.FC = () => {
-	const [searchQuery, setSearchQuery] = useState('');
+	const [searchQuery, setSearchQuery] = useState("");
 	const [isInputFocused, setIsInputFocused] = useState(false);
 
 	const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -12,7 +13,7 @@ const Search: React.FC = () => {
 	};
 
 	const handleClearSearch = () => {
-		setSearchQuery('');
+		setSearchQuery("");
 	};
 
 	const handleInputFocus = () => {
@@ -31,8 +32,11 @@ const Search: React.FC = () => {
 				placeholder="Пошук товарів..."
 			/>
 			{searchQuery && (
-				<button className={style.reset} onClick={handleClearSearch}>
-					Reset
+				<button
+					className={style.reset}
+					onClick={handleClearSearch}
+				>
+					<IoCloseOutline />
 				</button>
 			)}
 			{isInputFocused && <SearchButtonClose />}

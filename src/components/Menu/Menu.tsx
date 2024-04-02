@@ -1,9 +1,9 @@
-import React from 'react';
-import style from './Menu.module.scss';
-import MenuButton from './MenuButton/MenuButton';
-import menuList from './data';
-import SubMenu from '../SubMenu/SubMenu';
-import data from '../SubMenu/data';
+import React from "react";
+import style from "./Menu.module.scss";
+import MenuButton from "./MenuButton/MenuButton";
+import menuList from "./data";
+import SubMenu from "../SubMenu/SubMenu";
+import data from "../SubMenu/data";
 
 const Menu = ({ isBurgerActive }: { isBurgerActive: boolean }) => {
 	const [selectedItem, setSelectedItem] = React.useState<number | null>(null);
@@ -16,7 +16,10 @@ const Menu = ({ isBurgerActive }: { isBurgerActive: boolean }) => {
 		>
 			<menu className={style.menu}>
 				{menuList.map((item) => (
-					<li key={item.id} className={style.item}>
+					<li
+						key={item.id}
+						className={style.item}
+					>
 						<MenuButton
 							title={item.title}
 							openMenu={() =>
@@ -28,7 +31,10 @@ const Menu = ({ isBurgerActive }: { isBurgerActive: boolean }) => {
 						/>
 						{selectedItem === item.id && (
 							<div className={style.sub}>
-								<SubMenu data={data} id={item.id} />
+								<SubMenu
+									data={data}
+									id={item.id}
+								/>
 							</div>
 						)}
 					</li>

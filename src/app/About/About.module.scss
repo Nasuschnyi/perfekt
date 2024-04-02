@@ -1,23 +1,41 @@
 @import "../../styles/variables.scss";
 
 .about {
-    svg {
-        fill: transparent;
-        height: 2.875rem;
-        stroke: map-get($color, "primary");
-        transition: all 0.5s ease-in-out;
-        opacity: 0.8;
+	position: relative;
+	@extend %flex;
+	background: transparent;
 
-        & path:last-child {
-            stroke: map-get($color, "red");
-            opacity: 0.7;
-        }
-    }
+	svg {
+		fill: transparent;
+		height: 2.875rem;
+		stroke: map-get($color, "primary");
+		transition: all 0.5s ease-in-out;
+		opacity: 0.8;
 
-    &:is(:hover, :active) {
-        svg {
-            opacity: 1;
-            @extend %transition;
-        }
-    }
+		& path:last-child {
+			stroke: map-get($color, "red");
+			opacity: 0.7;
+		}
+	}
+
+	&:is(:hover, :active) {
+		svg {
+			opacity: 1;
+			@extend %transition;
+		}
+	}
+}
+
+.list {
+	position: absolute;
+	top: 2.875rem;
+	right: 2.875rem;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	background: map-get($color, "primary");
+	border-radius: 1rem;
+	border: 0.0625rem solid map-get($color, "dark");
+	padding: 1rem;
+	z-index: 5;
 }
