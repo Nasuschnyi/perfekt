@@ -64,11 +64,6 @@ const images = [
         src: '../../images/main/img-13.jpg',
         alt: "image",
     },
-    { 
-        id: 14,
-        src: '../../images/main/img-14.jpg',
-        alt: "image",
-    },
 ];
 
 export default images;

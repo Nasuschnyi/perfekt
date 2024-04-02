@@ -7,10 +7,6 @@ const menuList = [
 		id: 2,
 		title: 'Про нас',
 	},
-	{
-		id: 3,
-		title: 'Контакти',
-	},
 ];
 
 export default menuList;
