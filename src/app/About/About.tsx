@@ -1,12 +1,25 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import style from "./About.module.scss";
 import data from "./data";
+import { IoCloseOutline, IoTime } from "react-icons/io5";
+import Link from "next/link";
+import { FaLocationDot, FaPhoneFlip } from "react-icons/fa6";
+import { IoMdMail } from "react-icons/io";
 
 export default function About() {
 	const [isOpen, setIsOpen] = useState(false);
 
 	const handleToggle = () => {
 		setIsOpen((prevIsOpen) => !prevIsOpen);
+	};
+
+	const handleClose = (e: React.MouseEvent) => {
+		e.stopPropagation();
+		setIsOpen(false);
+	};
+
+	const handleListClick = (e: React.MouseEvent) => {
+		e.stopPropagation();
 	};
 
 	return (
@@ -32,11 +45,42 @@ export default function About() {
 				/>
 			</svg>
 			{isOpen && (
-				<ul className={style.list}>
-					<li className={style.item}>{data.time}</li>
-					<li className={style.item}>{data.address}</li>
-					<li className={style.item}>{data.phone}</li>
-					<li className={style.item}>{data.email}</li>
+				<ul
+					className={style.list}
+					onClick={handleListClick}
+				>
+					<li className={style.item}>
+						<IoTime className={style.icon} />
+						{data.time}
+					</li>
+					<li className={style.item}>
+						<FaLocationDot className={style.icon} />
+						{data.address}
+					</li>
+					<li className={style.item}>
+						<Link
+							className={style.link}
+							href={`tel:${data.phone}`}
+						>
+							<FaPhoneFlip className={style.icon} />
+							{data.phone}
+						</Link>
+					</li>
+					<li className={style.item}>
+						<Link
+							className={style.link}
+							href={`mailto:${data.email}`}
+						>
+							<IoMdMail className={style.icon} />
+							{data.email}
+						</Link>
+					</li>
+					<button
+						className={style.close}
+						onClick={handleClose}
+					>
+						<IoCloseOutline />
+					</button>
 				</ul>
 			)}
 		</button>

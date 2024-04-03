@@ -95,48 +95,23 @@ const SubMenu: React.FC<SubMenuProps> = ({ data, id }) => {
 					<h2 className={style.aboutTitle}>
 						{data.about.details.title}
 					</h2>
-					<div className={style.aboutContent}>
-						<ul className={style.contact}>
-							<li>
-								<IoTime />
-								{data.contact.information.time}
-							</li>
-							<li>
-								<FaLocationDot />
-								{data.contact.information.address}
-							</li>
-							<li>
-								<BsFillTelephoneFill />
-								<Link href="tel:{data.contact.information.phone}">
-									{data.contact.information.phone}
-								</Link>
-							</li>
-							<li>
-								<IoMdMail />
-								<Link href="mailto:{data.contact.information.email}">
-									{data.contact.information.email}
-								</Link>
-							</li>
-							<HiShoppingBag className={style.shoppingBag} />
-						</ul>
-						<p className={style.aboutDescription}>
-							<Link
-								className={style.aboutLink}
-								target="_blank"
-								href="https://perfekt.com.ua"
-							>
-								Perfekt.com.ua
-							</Link>
-							{data.about.details.description
-								.split("\n")
-								.map((sentence, index) => (
-									<React.Fragment key={index}>
-										{sentence.trim()}
-										<br />
-									</React.Fragment>
-								))}
-						</p>
-					</div>
+					<p className={style.aboutDescription}>
+						<Link
+							className={style.aboutLink}
+							target="_blank"
+							href="https://perfekt.com.ua"
+						>
+							Perfekt.com.ua
+						</Link>
+						{data.about.details.description
+							.split("\n")
+							.map((sentence, index) => (
+								<React.Fragment key={index}>
+									{sentence.trim()}
+									<br />
+								</React.Fragment>
+							))}
+					</p>
 					<Title />
 				</section>
 			);

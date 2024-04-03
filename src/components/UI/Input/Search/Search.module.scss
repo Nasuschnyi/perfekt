@@ -44,15 +44,19 @@
 	@extend %flex;
 	height: 100%;
 	background: transparent;
-
-	svg {
-		height: 2rem;
-		width: 2rem;
-	}
+	border-radius: 50%;
+	color: map-get($color, "red");
+	opacity: 0.8;
+	@extend %transition;
 
 	&:is(:hover, :active) {
-		opacity: 0.8;
+		opacity: 1;
 		@extend %transition;
+	}
+
+	& > svg {
+		height: 2rem;
+		width: 2rem;
 	}
 }
 
