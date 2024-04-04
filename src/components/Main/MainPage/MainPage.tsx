@@ -1,6 +1,5 @@
 import style from "./MainPage.module.scss";
 import images from "../data";
-import { useEffect, useState } from "react";
 
 const MainPage: React.FC = () => {
 	const items = images.map((image) => (

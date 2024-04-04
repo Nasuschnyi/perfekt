@@ -1,170 +1,167 @@
 //Variables
 $brkPoint: (
-    "2xl": 1536px,
-    //desktop-big
-    "xl": 1280px,
-    //desktop
-    "lg": 1024px,
-    //laptop
-    "md": 768px,
-    //tablet
-    "sm": 640px,
-    //mobile
+	"2xl": 1536px,
+	//desktop-big
+	"xl": 1280px,
+	//desktop
+	"lg": 1024px,
+	//laptop
+	"md": 768px,
+	//tablet
+	"sm": 640px,
+	//mobile
 );
 
 $color: (
-    "dark": #1a1818,
-    "green": #002d18,
-    "primary": #ece7e1,
-    "red": #ff0800,
-    "white": #f3f3f3
-);
-
-$hover: (
-    "gray": #757575
+	"dark": #1a1818,
+	"green": #002d18,
+	"primary": #ece7e1,
+	"red": #ff0800,
+	"white": #f3f3f3,
+	"gray": #757575,
 );
 
 //Extends
 %flex {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 %transition {
-    transition: all 0.3s ease;
+	transition: all 0.3s ease;
 }
 
 //Media-breakpoints
 
 @mixin desktop-big() {
-    @media (max-width: map-get($brkPoint, "2xl")) {
-        @content;
-    }
+	@media (max-width: map-get($brkPoint, "2xl")) {
+		@content;
+	}
 }
 
 @mixin desktop() {
-    @media (max-width: map-get($brkPoint, "xl")) {
-        @content;
-    }
+	@media (max-width: map-get($brkPoint, "xl")) {
+		@content;
+	}
 }
 
 @mixin laptop() {
-    @media (max-width: map-get($brkPoint, "lg")) {
-        @content;
-    }
+	@media (max-width: map-get($brkPoint, "lg")) {
+		@content;
+	}
 }
 
 @mixin tablet() {
-    @media (max-width: map-get($brkPoint, "md")) {
-        @content;
-    }
+	@media (max-width: map-get($brkPoint, "md")) {
+		@content;
+	}
 }
 
 @mixin mobile() {
-    @media (max-width: map-get($brkPoint, "sm")) {
-        @content;
-    }
+	@media (max-width: map-get($brkPoint, "sm")) {
+		@content;
+	}
 }
 
 //Animation
 @keyframes loading-anim {
-    0% {
-        left: -100%;
-    }
+	0% {
+		left: -100%;
+	}
 
-    100% {
-        left: 0;
-    }
+	100% {
+		left: 0;
+	}
 }
 
 @keyframes menu-link-anim {
-    0% {
-        left: -100%;
-        opacity: 0;
-    }
+	0% {
+		left: -100%;
+		opacity: 0;
+	}
 
-    100% {
-        left: 0;
-        opacity: 1;
-    }
+	100% {
+		left: 0;
+		opacity: 1;
+	}
 }
 
 @keyframes content-anim {
-    0% {
-        top: -100%;
-        opacity: 0;
-    }
+	0% {
+		top: -100%;
+		opacity: 0;
+	}
 
-    100% {
-        top: 0;
-        opacity: 1;
-    }
+	100% {
+		top: 0;
+		opacity: 1;
+	}
 }
 
 @keyframes img-anim {
-    0% {
-        opacity: 0;
-        transform: scale(0);
-    }
+	0% {
+		opacity: 0;
+		transform: scale(0);
+	}
 
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
 }
 
 @keyframes about-title-anim {
-    0% {
-        opacity: 0;
-        transform: scale(0);
-    }
+	0% {
+		opacity: 0;
+		transform: scale(0);
+	}
 
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
 }
 
 @keyframes contact-title-anim {
-    0% {
-        transform: translateY(100%);
-    }
+	0% {
+		transform: translateY(100%);
+	}
 
-    100% {
-        transform: translateY(0);
-    }
+	100% {
+		transform: translateY(0);
+	}
 }
 
 @keyframes bottom-anim {
-    0% {
-        transform: translateY(-100%);
-    }
+	0% {
+		transform: translateY(-100%);
+	}
 
-    100% {
-        transform: translateY(0);
-    }
+	100% {
+		transform: translateY(0);
+	}
 }
 
 @keyframes right-left-anim {
-    0% {
-        transform: translateX(100%);
-    }
+	0% {
+		transform: translateX(100%);
+	}
 
-    100% {
-        transform: translateX(0);
-    }
+	100% {
+		transform: translateX(0);
+	}
 }
 
 //true anim
 
 @keyframes fadeIn {
-    from {
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
+	from {
+		transform: translateX(-100%);
+		opacity: 0;
+	}
+	to {
+		transform: translateX(0);
+		opacity: 1;
+	}
 }

@@ -1,24 +1,24 @@
 @import "../../styles/variables.scss";
 
 .header {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    background: map-get($color, "green");
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	background: map-get($color, "green");
 }
 
 .container {
-    position: relative;
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    justify-content: space-between;
-    width: min(100% - 30px, 1600px);
-    margin-inline: auto;
+	position: relative;
+	display: flex;
+	align-items: center;
+	gap: 1.5rem;
+	justify-content: space-between;
+	width: min(100% - 1.875rem, 115rem);
+	margin-inline: auto;
 }
 
 @include tablet {
-    .container {
-        gap: 1rem;
-    }
+	.container {
+		gap: 1rem;
+	}
 }
