@@ -26,7 +26,6 @@
 
 .aside {
 	padding: 2rem;
-	color: map-get($color, 'dark');
 	border-right: 0.0625rem solid map-get($color, 'green');
 
 	&Title {
@@ -35,38 +34,64 @@
 		font-size: 1.25rem;
 		text-transform: uppercase;
 		margin: 0 0 1rem;
+		color: map-get($color, 'green');
 	}
 
 	&List {
 		display: flex;
 		flex-direction: column;
+		flex-wrap: wrap;
 		gap: 1rem;
 	}
 
 	&Item {
-		font-weight: 600;
+		font-weight: 500;
 		text-transform: lowercase;
+		animation: move-up 0.5s ease-in-out forwards;
+		opacity: 0;
 	}
 
 	&Link {
+		position: relative;
 		color: map-get($color, 'gray');
-		border-bottom: 0.125rem solid map-get($color, 'gray');
 		@extend %transition;
+
+		&::before {
+			content: '';
+			position: absolute;
+			height: 0.125rem;
+			width: 100%;
+			bottom: -0.125rem;
+			border-radius: 2rem;
+			background: map-get($color, 'gray');
+			@extend %transition;
+		}
 
 		&:is(:hover, :active) {
 			color: map-get($color, 'dark');
-			border-bottom: 0.125rem solid transparent;
-			@extend %transition;
+
+			&::before {
+				transform: scale(0);
+				background: map-get($color, 'dark');
+			}
 		}
 	}
 }
 
 .content {
 	&List {
+		//display: flex;
+		//flex-wrap: wrap;
 		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		gap: 1rem;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 1.5rem 1rem;
 		padding: 1rem;
+	}
+
+	&Item {
+		//max-width: 14rem;
+		animation: move-up 0.5s ease-in-out forwards;
+		opacity: 0;
 	}
 
 	&Link {
@@ -76,11 +101,22 @@
 		@extend %transition;
 
 		&:is(:hover, :active) {
-			transform: scale(1.05);
+			& .contentFigure {
+				img {
+					transform: scale(1.05);
+				}
+			}
+
+			& .contentTitle {
+				&::before {
+					transform: scale(1);
+				}
+			}
 		}
 	}
 
 	&Figure {
+		position: relative;
 		border-radius: 1rem;
 		box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.8);
 		overflow: hidden;
@@ -89,14 +125,63 @@
 			object-fit: cover;
 			width: 100%;
 			height: 100%;
+			@extend %transition;
 		}
 	}
 
 	&Title {
-		font-weight: 700;
+		position: relative;
+		width: fit-content;
+		font-weight: 600;
 		font-size: 1rem;
 		text-transform: uppercase;
 		margin: 0 0 0 1rem;
 		color: map-get($color, 'dark');
+
+		&::before {
+			content: '';
+			position: absolute;
+			height: 0.125rem;
+			width: 100%;
+			transform: scale(0);
+			bottom: -0.125rem;
+			border-radius: 2rem;
+			background: map-get($color, 'dark');
+			@extend %transition;
+		}
+	}
+}
+
+@include laptop {
+	.main {
+		grid-template-columns: 1fr;
+	}
+
+	.aside {
+		border: none;
+
+		&List {
+			flex-direction: row;
+		}
+	}
+
+	.content {
+		&List {
+			grid-template-columns: repeat(2, 1fr);
+			padding: 1rem 0;
+		}
+	}
+}
+
+@include tablet {
+	.aside {
+		padding: 1rem 0;
+	}
+}
+
+@include mobile {
+	.main {
+		display: flex;
+		flex-direction: column;
 	}
 }

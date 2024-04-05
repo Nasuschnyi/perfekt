@@ -2,10 +2,10 @@ const data = {
 	items: [
 		{
 			id: 1,
-			title: 'Унітази',
+			title: 'шланги',
 			link: '/',
-			img: '../images/main/img-13.jpg',
-			alt: 'lavatory pan',
+			img: '../images/main/hoses.jpg',
+			alt: 'hoses',
 		},
 		{
 			id: 2,
@@ -21,13 +21,13 @@ const data = {
 			img: '../images/main/img-10.jpg',
 			alt: 'taps',
 		},
-		/* {
+		{
 			id: 4,
-			title: 'Фітинги',
+			title: 'фітинги',
 			link: '/',
-			img: '../images/main/fittings.jpg',
+			img: '../images/main/pipes-connectors.jpg',
 			alt: 'fittings',
-		}, */
+		},
 	],
 };
 

@@ -26,6 +26,21 @@ const SearchPage: React.FC = () => {
 		</li>
 	));
 
+	const links = data.items.map((item) => (
+		<li
+			key={item.id}
+			className={style.asideItem}
+			style={{ animationDelay: `${item.id * 0.2}s` }}
+		>
+			<Link
+				href={item.link}
+				className={style.asideLink}
+			>
+				{item.title}
+			</Link>
+		</li>
+	));
+
 	return (
 		<>
 			<header className={style.header}>
@@ -37,56 +52,7 @@ const SearchPage: React.FC = () => {
 			<main className={style.main}>
 				<aside className={style.aside}>
 					<h1 className={style.asideTitle}>ТОП ПОШУКУ</h1>
-					<ul className={style.asideList}>
-						<li className={style.asideItem}>
-							<Link
-								className={style.asideLink}
-								href="/"
-							>
-								Фітинги
-							</Link>
-						</li>
-						<li className={style.asideItem}>
-							<Link
-								className={style.asideLink}
-								href="/"
-							>
-								зарядні станції
-							</Link>
-						</li>
-						<li className={style.asideItem}>
-							<Link
-								className={style.asideLink}
-								href="/"
-							>
-								взуття
-							</Link>
-						</li>
-						<li className={style.asideItem}>
-							<Link
-								className={style.asideLink}
-								href="/"
-							>
-								автотовари
-							</Link>
-						</li>
-						<li className={style.asideItem}>
-							<Link
-								className={style.asideLink}
-								href="/"
-							>
-								унітази
-							</Link>
-						</li>
-						<li className={style.asideItem}>
-							<Link
-								className={style.asideLink}
-								href="/"
-							>
-								іграшки
-							</Link>
-						</li>
-					</ul>
+					<ul className={style.asideList}>{links}</ul>
 				</aside>
 				<section className={style.content}>
 					<ul className={style.contentList}>{content}</ul>
