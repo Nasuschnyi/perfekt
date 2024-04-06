@@ -1,6 +1,5 @@
-import Header from "@/components/Header/Header";
-import style from "./Homepage.module.scss";
-import Main from "@/components/Main/Main";
+import Header from '@/components/Header/Header';
+import Main from '@/components/Main/Main';
 
 const Homepage = () => {
 	return (

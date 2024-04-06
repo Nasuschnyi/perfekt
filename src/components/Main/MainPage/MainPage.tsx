@@ -1,5 +1,5 @@
-import style from "./MainPage.module.scss";
-import images from "../data";
+import style from './MainPage.module.scss';
+import images from '../data';
 
 const MainPage: React.FC = () => {
 	const items = images.map((image) => (

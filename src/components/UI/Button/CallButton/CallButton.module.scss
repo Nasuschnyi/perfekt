@@ -1,4 +1,8 @@
-@import "../../../../styles/variables.scss";
+@import '../../../../styles/variables.scss';
+
+.container {
+	position: relative;
+}
 
 .call {
 	position: relative;
@@ -9,7 +13,7 @@
 	svg {
 		height: 2.25rem;
 		width: 2.25rem;
-		fill: map-get($color, "primary");
+		fill: map-get($color, 'primary');
 	}
 }
 
@@ -21,18 +25,18 @@
 	flex-direction: column;
 	gap: 0.5rem;
 	padding: 0.5rem 1rem;
-	border: 1px solid map-get($color, "primary");
+	border: 1px solid map-get($color, 'primary');
 	border-radius: 1.5rem;
 	box-shadow: 0 1px 10px rgba(0, 0, 0, 0.8);
-	background: map-get($color, "primary");
+	background: map-get($color, 'primary');
 
 	&::before {
-		content: "";
+		content: '';
 		top: -1rem;
 		left: 57%;
 		position: absolute;
 		border: 0.5rem solid transparent;
-		border-bottom: 0.625rem solid map-get($color, "primary");
+		border-bottom: 0.625rem solid map-get($color, 'primary');
 	}
 }
 
@@ -40,7 +44,7 @@
 	width: 100%;
 	white-space: nowrap;
 	background: transparent;
-	color: map-get($color, "dark");
+	color: map-get($color, 'dark');
 	font-weight: 600;
 	font-size: 1.125rem;
 }

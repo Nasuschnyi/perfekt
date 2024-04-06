@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import style from '../Menu.module.scss';
 import { IoMdArrowRoundDown } from 'react-icons/io';
 

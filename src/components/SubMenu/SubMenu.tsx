@@ -1,41 +1,9 @@
-import React from "react";
-import Link from "next/link";
-import style from "./SubMenu.module.scss";
-import Title from "../UI/Title/Title";
-import { IoMdArrowRoundDown, IoMdMail } from "react-icons/io";
-import { FaLocationDot } from "react-icons/fa6";
-import { BsFillTelephoneFill } from "react-icons/bs";
-import { IoTime } from "react-icons/io5";
-import { HiShoppingBag } from "react-icons/hi2";
-
-interface SubItem {
-	id: number;
-	title: string;
-	subList: { subId: number; subTitle: string; subLink: string }[];
-}
-
-interface SubMenuProps {
-	data: {
-		catalog: {
-			items: SubItem[];
-		};
-		about: {
-			details: {
-				title: string;
-				description: string;
-			};
-		};
-		contact: {
-			information: {
-				address: string;
-				phone: string;
-				email: string;
-				time: string;
-			};
-		};
-	};
-	id: number;
-}
+import React from 'react';
+import Link from 'next/link';
+import style from './SubMenu.module.scss';
+import Title from '../UI/Title/Title';
+import { IoMdArrowRoundDown } from 'react-icons/io';
+import { SubMenuProps } from './types';
 
 const SubMenu: React.FC<SubMenuProps> = ({ data, id }) => {
 	const [openSubItem, setOpenSubItem] = React.useState<number | null>(null);
@@ -57,7 +25,7 @@ const SubMenu: React.FC<SubMenuProps> = ({ data, id }) => {
 						>
 							<button
 								className={`${style.subBtn} ${
-									openSubItem === id ? style.active : ""
+									openSubItem === id ? style.active : ''
 								}`}
 								onClick={() => toggleNestedSubMenu(id)}
 							>
@@ -104,7 +72,7 @@ const SubMenu: React.FC<SubMenuProps> = ({ data, id }) => {
 							Perfekt.com.ua
 						</Link>
 						{data.about.details.description
-							.split("\n")
+							.split('\n')
 							.map((sentence, index) => (
 								<React.Fragment key={index}>
 									{sentence.trim()}
