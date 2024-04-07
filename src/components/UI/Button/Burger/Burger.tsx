@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import style from './Burger.module.scss';
 
 type BurgerProps = {
-	setIsActive: (isActive: boolean) => undefined;
+	setIsActive: (isActive: boolean) => void;
 };
 
 const Burger = ({ setIsActive }: BurgerProps) => {
