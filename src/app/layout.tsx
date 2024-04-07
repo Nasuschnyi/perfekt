@@ -3,7 +3,7 @@ import '../styles/globals.css';
 
 export const metadata: Metadata = {
 	title: 'Perfekt',
-	description: 'Пошук товарів',
+	description: 'Онлайн магазин',
 };
 
 export default function RootLayout({
