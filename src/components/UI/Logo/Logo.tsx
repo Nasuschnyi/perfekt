@@ -3,7 +3,10 @@ import style from './Logo.module.scss';
 
 const Logo = () => {
 	return (
-		<Link href="/" className={style.logo}>
+		<Link
+			href="/"
+			className={style.logo}
+		>
 			<svg viewBox="0 0 1024.000000 1024.000000">
 				<g transform="translate(0.000000,1024.000000) scale(0.100000,-0.100000)">
 					<path

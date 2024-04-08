@@ -5,8 +5,8 @@ import MainPage from './MainPage/MainPage';
 const Main = () => {
 	return (
 		<main className={style.main}>
-			<MainPage/>
-			<Title/>	
+			<MainPage />
+			<Title />
 		</main>
 	);
 };

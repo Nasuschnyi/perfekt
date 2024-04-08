@@ -3,6 +3,7 @@ import style from './SearchPage.module.scss';
 import Search from '@/components/UI/Input/Search/Search';
 import Link from 'next/link';
 import data from './data';
+import Image from 'next/image';
 
 const SearchPage: React.FC = () => {
 	const content = data.items.map((item) => (
@@ -16,9 +17,12 @@ const SearchPage: React.FC = () => {
 				href={item.link}
 			>
 				<figure className={style.contentFigure}>
-					<img
+					<Image
 						src={item.img}
 						alt={item.alt}
+						width={500}
+						height={500}
+						loading="lazy"
 					/>
 				</figure>
 				<h2 className={style.contentTitle}>{item.title}</h2>
