@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import style from './About.module.scss';
 import data from './data';
 import { IoCloseOutline, IoTime } from 'react-icons/io5';
@@ -23,7 +23,7 @@ export default function About() {
 	};
 
 	return (
-		<div className={style.container}>
+		<>
 			<button
 				className={style.about}
 				onClick={handleToggle}
@@ -85,6 +85,6 @@ export default function About() {
 					</button>
 				</ul>
 			)}
-		</div>
+		</>
 	);
 }

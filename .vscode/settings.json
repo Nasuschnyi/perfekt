@@ -1,9 +1,7 @@
 {
-    "cSpell.words": [
-        "perfekt"
-    ],
-    "editor.unicodeHighlight.allowedLocales": {
-        "ru": true,
-        "uk": true
-    }
+	"cSpell.words": ["Gnuprivacyguard", "perfekt"],
+	"editor.unicodeHighlight.allowedLocales": {
+		"ru": true,
+		"uk": true
+	}
 }

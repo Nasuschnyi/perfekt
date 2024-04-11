@@ -22,7 +22,6 @@ const SearchPage: React.FC = () => {
 						alt={item.alt}
 						width={500}
 						height={500}
-						loading="lazy"
 					/>
 				</figure>
 				<h2 className={style.contentTitle}>{item.title}</h2>

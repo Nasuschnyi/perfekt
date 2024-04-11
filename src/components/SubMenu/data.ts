@@ -5,70 +5,109 @@ const data = {
 		items: [
 			{
 				id: 1,
-				title: 'Одяг, краса та аксесуари',
+				title: 'Змішувачі та крани',
 				subList: [
-					{ subId: 1, subTitle: 'Аксесуари', subLink: '' },
-					{ subId: 2, subTitle: 'Взуття', subLink: '' },
-					{ subId: 3, subTitle: 'Одяг', subLink: '' },
-					{ subId: 4, subTitle: 'Краса та здоров’я', subLink: '' },
+					{
+						subId: 1,
+						subTitle: 'Змішувачі для ванни та душу',
+						subLink:
+							'https://perfekt.com.ua/index.php?route=product/category&path=206_207_208',
+					},
+					{
+						subId: 2,
+						subTitle: 'Змішувачі для кухні',
+						subLink:
+							'https://perfekt.com.ua/index.php?route=product/category&path=206_207_209',
+					},
+					{
+						subId: 3,
+						subTitle: 'Змішувачі для умивальника',
+						subLink:
+							'https://perfekt.com.ua/index.php?route=product/category&path=206_207_210',
+					},
+					{
+						subId: 4,
+						subTitle: 'Крани',
+						subLink:
+							'https://perfekt.com.ua/index.php?route=product/category&path=206_207_211',
+					},
 				],
 			},
 			{
 				id: 2,
-				title: 'Техніка та інструменти',
+				title: 'Фітинги пластикові',
 				subList: [
-					{ subId: 1, subTitle: 'Побутова техніка', subLink: '' },
-					{ subId: 2, subTitle: 'Зарядні станції', subLink: '' },
+					{
+						subId: 1,
+						subTitle: 'Вентилі',
+						subLink:
+							'https://perfekt.com.ua/index.php?route=product/category&path=206_212_213',
+					},
+					{
+						subId: 2,
+						subTitle: 'Кути',
+						subLink:
+							'https://perfekt.com.ua/index.php?route=product/category&path=206_212_214',
+					},
 					{
 						subId: 3,
-						subTitle: 'Інструменти та автотовари',
-						subLink: '',
+						subTitle: 'Муфти',
+						subLink:
+							'https://perfekt.com.ua/index.php?route=product/category&path=206_212_216',
 					},
 					{
 						subId: 4,
-						subTitle: 'Електроніка та аксесуари',
-						subLink: '',
+						subTitle: 'Різьбовий фітинг',
+						subLink:
+							'https://perfekt.com.ua/index.php?route=product/category&path=206_212_243',
+					},
+					{
+						subId: 5,
+						subTitle: 'Трійники',
+						subLink:
+							'https://perfekt.com.ua/index.php?route=product/category&path=206_212_215',
 					},
 				],
 			},
 			{
 				id: 3,
-				title: 'Дім та відпочинок',
+				title: 'Шланги',
 				subList: [
 					{
 						subId: 1,
-						subTitle: 'Активний відпочинок, туризм та хобі',
-						subLink: '',
+						subTitle: 'Шланги для підведення води',
+						subLink:
+							'https://perfekt.com.ua/index.php?route=product/category&path=206_217_244',
 					},
-					{ subId: 2, subTitle: 'Домашній текстиль', subLink: '' },
-					{ subId: 3, subTitle: 'Дім та офіс', subLink: '' },
-					{ subId: 4, subTitle: 'Посуд та аксесуари', subLink: '' },
+					{
+						subId: 2,
+						subTitle: 'Шланги для підключення змішувача',
+						subLink:
+							'https://perfekt.com.ua/index.php?route=product/category&path=206_217_245',
+					},
 				],
 			},
 			{
 				id: 4,
-				title: 'Сантехніка',
+				title: 'Унітази',
 				subList: [
-					{ subId: 1, subTitle: 'Унітази', subLink: '' },
-					{ subId: 2, subTitle: 'Змішувачі та крани', subLink: '' },
-					{ subId: 3, subTitle: 'Шланги', subLink: '' },
-					{ subId: 4, subTitle: 'Фітинги', subLink: '' },
 					{
-						subId: 5,
-						subTitle: 'Аксесуари для ванної кімнати',
-						subLink: '',
+						subId: 1,
+						subTitle: 'Розумний унітаз біде',
+						subLink:
+							'https://perfekt.com.ua/index.php?route=product/product&path=246&product_id=202',
 					},
 				],
 			},
 			{
 				id: 5,
-				title: 'Діти та подарунки',
+				title: 'Решта',
 				subList: [
-					{ subId: 1, subTitle: 'Іграшки', subLink: '' },
 					{
-						subId: 2,
-						subTitle: 'Сувеніри та подарунки',
-						subLink: '',
+						subId: 1,
+						subTitle: 'Інше',
+						subLink:
+							'https://perfekt.com.ua/index.php?route=product/category&path=206_218',
 					},
 				],
 			},
@@ -76,9 +115,9 @@ const data = {
 	},
 	about: {
 		details: {
-			title: 'Ми раді вітати вас на сторінках нашого інтернет-магазину',
+			title: 'Вітаємо Вас на нашому Інтернет-магазині',
 			description:
-				' - це універсальний магазин, що спрощує процес вибору та покупки.\n Ми цінуємо розширення можливостей, включення, різноманітність та повагу до відмінностей.\n Наша мета - бути корисними та творити добро для світу.\n Ми пропонуємо актуальні ціни, зручність замовлення, швидкість, економію часу, якісне обслуговування, широкий вибір доставлення та оплати, програми лояльності, акції та спеціальні пропозиції.\n Ми цінуємо кожного покупця і сподіваємося на плідну співпрацю.\n Бажаємо вам вдалих покупок!',
+				' - це універсальний магазин, що спрощує процес вибору та покупки. \n Наша мета - бути корисними та творити добро для світу.\n Пропонуємо - актуальні ціни, зручність замовлення, економію часу, якісне обслуговування, програми лояльності, акції.\n Цінуємо - кожного покупця і сподіваємося на плідну співпрацю.\n Бажаємо вам вдалих покупок!',
 		},
 	},
 	contact: {

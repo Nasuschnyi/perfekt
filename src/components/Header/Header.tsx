@@ -12,13 +12,13 @@ const Header = () => {
 
 	return (
 		<header className={style.header}>
-			<div className={style.container}>
+			<section className={style.container}>
 				<Logo />
 				<SearchBar />
 				<CallButton />
 				<About />
 				<Burger setIsActive={setBurgerActive} />
-			</div>
+			</section>
 			<Menu isBurgerActive={isBurgerActive} />
 		</header>
 	);

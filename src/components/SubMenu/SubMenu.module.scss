@@ -187,4 +187,15 @@
 		line-height: 160%;
 		text-wrap: balance;
 	}
+
+	&Figure {
+		display: flex;
+		justify-content: center;
+	}
+
+	&Icon {
+		color: map-get($color, 'primary');
+		width: 9vw;
+		height: 9vw;
+	}
 }

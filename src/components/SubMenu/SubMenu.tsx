@@ -1,9 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
 import style from './SubMenu.module.scss';
-import Title from '../UI/Title/Title';
 import { IoMdArrowRoundDown } from 'react-icons/io';
 import { SubMenuProps } from './types';
+import { MdLocalGroceryStore } from 'react-icons/md';
 
 const SubMenu: React.FC<SubMenuProps> = ({ data, id }) => {
 	const [openSubItem, setOpenSubItem] = React.useState<number | null>(null);
@@ -45,6 +45,7 @@ const SubMenu: React.FC<SubMenuProps> = ({ data, id }) => {
 													toggleNestedSubMenu(id)
 												}
 												className={style.nestedSubLink}
+												target="_blank"
 											>
 												{subItem.subTitle}
 											</Link>
@@ -80,7 +81,9 @@ const SubMenu: React.FC<SubMenuProps> = ({ data, id }) => {
 								</React.Fragment>
 							))}
 					</p>
-					<Title />
+					<figure className={style.aboutFigure}>
+						<MdLocalGroceryStore className={style.aboutIcon} />
+					</figure>
 				</section>
 			);
 			break;
