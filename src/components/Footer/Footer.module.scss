@@ -1,7 +1,7 @@
 @import '../../styles/variables.scss';
 
 .footer {
-	background: map-get($color, 'green');
+	background: map-get($color, 'dark');
 	color: map-get($color, 'primary');
 }
 
