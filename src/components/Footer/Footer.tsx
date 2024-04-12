@@ -10,9 +10,10 @@ export default function Footer() {
 				<nav className={style.nav}>
 					<Link
 						className={style.link}
-						href=""
+						href="delivery"
+						target="_blank"
 					>
-						<TbTruckDelivery /> Доставлення
+						<TbTruckDelivery /> Доставка
 					</Link>
 					<Link
 						className={style.link}
