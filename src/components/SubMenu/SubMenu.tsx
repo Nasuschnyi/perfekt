@@ -4,6 +4,7 @@ import style from './SubMenu.module.scss';
 import { IoMdArrowRoundDown } from 'react-icons/io';
 import { SubMenuProps } from './types';
 import { MdLocalGroceryStore } from 'react-icons/md';
+import data from './data';
 
 const SubMenu: React.FC<SubMenuProps> = ({ data, id }) => {
 	const [openSubItem, setOpenSubItem] = React.useState<number | null>(null);

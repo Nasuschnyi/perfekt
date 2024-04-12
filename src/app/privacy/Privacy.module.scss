@@ -1,0 +1,39 @@
+@import '../../styles/variables.scss';
+
+.privacy {
+	width: min(100% - 1.875rem, 100rem);
+	margin: 0 auto;
+	padding: 1.5rem 0;
+}
+
+.title {
+	font-family: 'Montserrat Subrayada', sans-serif;
+	font-weight: 700;
+	font-size: 1.5rem;
+	text-transform: uppercase;
+	text-align: center;
+	margin: 0 0 1.5rem;
+	color: map-get($color, 'green');
+}
+
+.desc {
+	margin: 0 0 1rem;
+}
+
+@include tablet {
+	.privacy {
+		padding: 1rem 0;
+	}
+
+	.title {
+		font-size: 1.25rem;
+		margin: 0 0 1rem;
+	}
+}
+
+@include mobile {
+	.desc,
+	.list {
+		font-size: 0.875rem;
+	}
+}

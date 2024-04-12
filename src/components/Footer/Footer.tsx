@@ -17,7 +17,8 @@ export default function Footer() {
 					</Link>
 					<Link
 						className={style.link}
-						href=""
+						href="privacy"
+						target="_blank"
 					>
 						<SiGnuprivacyguard /> Конфіденційність
 					</Link>
