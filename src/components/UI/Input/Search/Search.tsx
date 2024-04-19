@@ -1,27 +1,40 @@
-import { useState } from "react";
-import SearchButtonClose from "../../Button/SearchButtonClose/SearchButtonClose";
-import style from "./Search.module.scss";
-import { FiSearch } from "react-icons/fi";
-import { IoCloseOutline } from "react-icons/io5";
+'use client';
+import React, { useState } from 'react';
+import SearchButtonClose from '../../Button/SearchButtonClose/SearchButtonClose';
+import style from './Search.module.scss';
+import { FiSearch } from 'react-icons/fi';
+import { IoCloseOutline } from 'react-icons/io5';
 
-const Search: React.FC = () => {
-	const [searchQuery, setSearchQuery] = useState("");
+type SearchProps = {
+	onClick: () => void;
+	onClose: () => void;
+};
+
+const Search: React.FC<SearchProps> = ({ onClick, onClose }) => {
+	const [searchQuery, setSearchQuery] = useState('');
 	const [isInputFocused, setIsInputFocused] = useState(false);
 
 	const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
 		setSearchQuery(event.target.value);
 	};
 
-	const handleClearSearch = () => {
-		setSearchQuery("");
-	};
-
 	const handleInputFocus = () => {
 		setIsInputFocused(true);
 	};
 
+	const handleClearSearch = () => {
+		setSearchQuery('');
+	};
+
+	const handleFormClick = () => {
+		onClick();
+	};
+
 	return (
-		<form className={style.searchForm}>
+		<form
+			className={style.searchForm}
+			onClick={handleFormClick}
+		>
 			<FiSearch className={style.searchIcon} />
 			<input
 				className={style.search}
@@ -39,7 +52,12 @@ const Search: React.FC = () => {
 					<IoCloseOutline />
 				</button>
 			)}
-			{isInputFocused && <SearchButtonClose />}
+			{isInputFocused && (
+				<SearchButtonClose
+					onClick={onClose}
+					updateInputFocus={handleInputFocus}
+				/>
+			)}
 		</form>
 	);
 };

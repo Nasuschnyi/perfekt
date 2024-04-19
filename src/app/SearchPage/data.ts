@@ -11,14 +11,14 @@ const data = {
 			id: 2,
 			title: 'Зарядні стації',
 			link: '',
-			img: '/images/main/img-2.jpg',
+			img: '/images/main/charging-stations.jpg',
 			alt: 'charging stations',
 		},
 		{
 			id: 3,
 			title: 'Крани',
 			link: '',
-			img: '/images/main/img-10.jpg',
+			img: '/images/main/taps.jpg',
 			alt: 'taps',
 		},
 		{

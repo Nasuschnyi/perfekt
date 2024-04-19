@@ -1,11 +1,12 @@
-@import "../../../styles/variables.scss";
+@import '../../../styles/variables.scss';
 
 .logo {
-    display: flex;
-    flex-direction: column;
+	display: flex;
+	flex-direction: column;
+	width: fit-content;
 
-    svg {
-        height: 6rem;
-        fill: map-get($color, "primary");
-    }
+	svg {
+		height: 6rem;
+		fill: map-get($color, 'primary');
+	}
 }

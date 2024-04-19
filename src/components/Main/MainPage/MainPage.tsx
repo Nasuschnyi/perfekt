@@ -14,6 +14,7 @@ const MainPage: React.FC = () => {
 				alt={image.alt}
 				width={600}
 				height={600}
+				priority={true}
 			/>
 		</li>
 	));

@@ -1,7 +1,8 @@
 @import '../../styles/variables.scss';
 
 .about {
-	@extend %flex;
+	display: flex;
+	justify-content: flex-end;
 	background: transparent;
 
 	& > svg {

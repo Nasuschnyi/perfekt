@@ -1,15 +1,25 @@
-import Link from "next/link";
-import style from "./SearchButtonClose.module.scss";
-import { IoMdArrowRoundBack } from "react-icons/io";
+import style from './SearchButtonClose.module.scss';
+import { IoMdArrowRoundBack } from 'react-icons/io';
 
-const SearchButtonClose = () => {
+interface SearchButtonCloseProps {
+	onClick: () => void;
+	updateInputFocus: () => void;
+}
+
+const SearchButtonClose: React.FC<SearchButtonCloseProps> = ({
+	onClick,
+	updateInputFocus,
+}) => {
 	return (
-		<Link
-			href="/"
+		<button
 			className={style.close}
+			onClick={() => {
+				onClick();
+				updateInputFocus();
+			}}
 		>
 			<IoMdArrowRoundBack />
-		</Link>
+		</button>
 	);
 };
 
