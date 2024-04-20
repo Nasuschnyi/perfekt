@@ -35,7 +35,7 @@ const Search: React.FC<SearchProps> = ({ onClick, onClose }) => {
 			className={style.searchForm}
 			onClick={handleFormClick}
 		>
-			<FiSearch className={style.searchIcon} />
+			{!searchQuery && <FiSearch className={style.searchIcon} />}
 			<input
 				className={style.search}
 				type="text"

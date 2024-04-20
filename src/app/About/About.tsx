@@ -56,25 +56,13 @@ export default function About() {
 						{data.time}
 					</li>
 					<li className={style.item}>
-						<FaLocationDot className={style.icon} />
-						{data.address}
-					</li>
-					<li className={style.item}>
 						<Link
 							className={style.link}
-							href={`tel:${data.phone}`}
+							target="_blank"
+							href="https://maps.app.goo.gl/5CEszVb75pUBjVWL6"
 						>
-							<FaPhoneFlip className={style.icon} />
-							{data.phone}
-						</Link>
-					</li>
-					<li className={style.item}>
-						<Link
-							className={style.link}
-							href={`mailto:${data.email}`}
-						>
-							<IoMdMail className={style.icon} />
-							{data.email}
+							<FaLocationDot className={style.icon} />
+							{data.address}
 						</Link>
 					</li>
 					<button

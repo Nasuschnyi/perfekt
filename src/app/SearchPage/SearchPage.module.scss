@@ -80,8 +80,6 @@
 
 .content {
 	&List {
-		//display: flex;
-		//flex-wrap: wrap;
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
 		gap: 1.5rem 1rem;
@@ -89,7 +87,6 @@
 	}
 
 	&Item {
-		//max-width: 14rem;
 		animation: move-up 0.5s ease-in-out forwards;
 		opacity: 0;
 	}

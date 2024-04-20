@@ -1,4 +1,4 @@
-@import "../../styles/variables.scss";
+@import '../../styles/variables.scss';
 
 .nav {
 	border-top: 0.0625rem solid rgba(236, 231, 225, 0.16);
@@ -18,7 +18,7 @@
 	padding: 0.5rem;
 	font-weight: 600;
 	font-size: 1.25rem;
-	color: map-get($color, "primary");
+	color: map-get($color, 'primary');
 	text-transform: uppercase;
 	background: transparent;
 	opacity: 0.85;
@@ -39,7 +39,7 @@
 
 	& > svg {
 		transform: rotate(-180deg);
-		color: map-get($color, "red");
+		color: map-get($color, 'red');
 		transition: all 0.5s ease-in-out;
 	}
 }
@@ -49,7 +49,7 @@
 	top: 100%;
 	left: 0;
 	right: 0;
-	background: map-get($color, "green");
+	background: map-get($color, 'green');
 	border-top: 0.0625rem solid rgba(236, 231, 225, 0.16);
 	animation: fadeIn 0.5s ease-in-out forwards;
 	z-index: 3;
@@ -61,9 +61,9 @@
 		position: absolute;
 		left: 0;
 		right: 0;
-		top: 96px;
+		top: 5.9375rem;
 		z-index: 1;
-		background: map-get($color, "green");
+		background: map-get($color, 'green');
 
 		&.active {
 			display: block;

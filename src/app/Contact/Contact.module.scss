@@ -1,21 +1,17 @@
 @import '../../styles/variables.scss';
 
-.about {
+.contact {
 	display: flex;
-	justify-content: flex-end;
 	background: transparent;
+	padding: 0.375rem;
 	width: fit-content;
 
 	& > svg {
-		fill: transparent;
-		height: 2.875rem;
-		stroke: map-get($color, 'primary');
+		fill: map-get($color, 'primary');
+		height: 2.125rem;
+		width: 2.125rem;
 		opacity: 0.8;
 		@extend %transition;
-
-		& path:last-child {
-			stroke: map-get($color, 'red');
-		}
 	}
 
 	&:is(:hover, :active) {
@@ -91,9 +87,17 @@
 	}
 }
 
+@include tablet {
+	.list {
+		left: 1rem;
+		right: unset;
+	}
+}
+
 @include mobile {
 	.list {
 		right: 0;
+		left: 0;
 		width: 100%;
 	}
 }

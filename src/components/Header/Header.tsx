@@ -9,6 +9,7 @@ import Search from '../UI/Input/Search/Search';
 import SearchPage from '@/app/SearchPage/SearchPage';
 import Main from '../Main/Main';
 import Footer from '../Footer/Footer';
+import Contact from '@/app/Contact/Contact';
 
 const Header = React.memo(() => {
 	const [isBurgerActive, setBurgerActive] = React.useState(false);
@@ -34,7 +35,7 @@ const Header = React.memo(() => {
 						onClick={handleSearchClick}
 						onClose={handleSearchClose}
 					/>
-					<CallButton />
+					<Contact />
 					<About />
 					<Burger setIsActive={setBurgerActive} />
 				</section>
