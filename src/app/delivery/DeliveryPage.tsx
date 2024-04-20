@@ -9,7 +9,7 @@ import Link from 'next/link';
 import { LuShieldCheck } from 'react-icons/lu';
 import { RiFilePaper2Line } from 'react-icons/ri';
 
-export default function DeliveryPage() {
+const DeliveryPage = () => {
 	return (
 		<section className={style.delivery}>
 			<h1 className={style.title}>Умови оплати та доставки</h1>
@@ -202,4 +202,6 @@ export default function DeliveryPage() {
 			</ul>
 		</section>
 	);
-}
+};
+
+export default DeliveryPage;

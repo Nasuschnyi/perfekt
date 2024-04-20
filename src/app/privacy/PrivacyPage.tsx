@@ -2,7 +2,7 @@ import React from 'react';
 import style from './Privacy.module.scss';
 import data from './data';
 
-export default function PrivacyPage() {
+const PrivacyPage = () => {
 	return (
 		<section className={style.privacy}>
 			<h1 className={style.title}>{data.title}</h1>
@@ -22,4 +22,6 @@ export default function PrivacyPage() {
 			</p>
 		</section>
 	);
-}
+};
+
+export default PrivacyPage;
