@@ -6,8 +6,8 @@ import { FiSearch } from 'react-icons/fi';
 import { IoCloseOutline } from 'react-icons/io5';
 
 type SearchProps = {
-	onClick: () => void;
-	onClose: () => void;
+	onClick: () => boolean;
+	onClose: () => boolean;
 };
 
 const Search: React.FC<SearchProps> = ({ onClick, onClose }) => {

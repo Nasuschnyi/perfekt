@@ -4,7 +4,7 @@ import { IoMdArrowRoundDown } from 'react-icons/io';
 
 const MenuButton: React.FC<{
 	title: string;
-	openMenu: () => void;
+	openMenu: () => boolean;
 	isSelected: boolean;
 }> = ({ title, openMenu, isSelected }) => {
 	return (
