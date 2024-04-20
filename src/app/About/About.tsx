@@ -3,8 +3,7 @@ import style from './About.module.scss';
 import data from './data';
 import { IoCloseOutline, IoTime } from 'react-icons/io5';
 import Link from 'next/link';
-import { FaLocationDot, FaPhoneFlip } from 'react-icons/fa6';
-import { IoMdMail } from 'react-icons/io';
+import { FaLocationDot } from 'react-icons/fa6';
 
 export default function About() {
 	const [isOpen, setIsOpen] = useState(false);

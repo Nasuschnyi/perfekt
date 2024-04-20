@@ -1,9 +1,8 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import style from './Header.module.scss';
 import About from '@/app/About/About';
 import Menu from '../Menu/Menu';
 import Logo from '../UI/Logo/Logo';
-import CallButton from '../UI/Button/CallButton/CallButton';
 import Burger from '../UI/Button/Burger/Burger';
 import Search from '../UI/Input/Search/Search';
 import SearchPage from '@/app/SearchPage/SearchPage';
