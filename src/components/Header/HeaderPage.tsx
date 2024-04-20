@@ -50,4 +50,6 @@ const HeaderPage = React.memo(() => {
 	);
 });
 
+HeaderPage.displayName = 'HeaderPage';
+
 export default HeaderPage;
