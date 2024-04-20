@@ -3,8 +3,8 @@ import Link from 'next/link';
 import style from './SubMenu.module.scss';
 import { IoMdArrowRoundDown } from 'react-icons/io';
 import { SubMenuProps } from './types';
-import { MdLocalGroceryStore } from 'react-icons/md';
 import data from './data';
+import { HiOutlineShoppingCart } from 'react-icons/hi2';
 
 const SubMenu: React.FC<SubMenuProps> = ({ data, id }) => {
 	const [openSubItem, setOpenSubItem] = React.useState<number | null>(null);
@@ -83,7 +83,7 @@ const SubMenu: React.FC<SubMenuProps> = ({ data, id }) => {
 							))}
 					</p>
 					<figure className={style.aboutFigure}>
-						<MdLocalGroceryStore className={style.aboutIcon} />
+						<HiOutlineShoppingCart className={style.aboutIcon} />
 					</figure>
 				</section>
 			);

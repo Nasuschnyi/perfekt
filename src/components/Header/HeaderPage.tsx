@@ -1,5 +1,5 @@
 import React from 'react';
-import style from './Header.module.scss';
+import style from './HeaderPage.module.scss';
 import About from '@/app/About/About';
 import Menu from '../Menu/Menu';
 import Logo from '../UI/Logo/Logo';
@@ -10,7 +10,7 @@ import Main from '../Main/Main';
 import Footer from '../Footer/Footer';
 import Contact from '@/app/Contact/Contact';
 
-const Header = React.memo(() => {
+const HeaderPage = React.memo(() => {
 	const [isBurgerActive, setBurgerActive] = React.useState(false);
 	const [isSearchPage, setIsSearchPage] = React.useState(false);
 	const [isFooterVisible, setIsFooterVisible] = React.useState(true);
@@ -50,4 +50,4 @@ const Header = React.memo(() => {
 	);
 });
 
-export default Header;
+export default HeaderPage;

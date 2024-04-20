@@ -1,9 +1,9 @@
-import Header from '@/components/Header/Header';
+import HeaderPage from '@/components/Header/HeaderPage';
 
 const Homepage = () => {
 	return (
 		<>
-			<Header />
+			<HeaderPage />
 		</>
 	);
 };
