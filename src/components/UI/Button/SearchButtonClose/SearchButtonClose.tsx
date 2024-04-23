@@ -2,7 +2,7 @@ import style from './SearchButtonClose.module.scss';
 import { IoMdArrowRoundBack } from 'react-icons/io';
 
 interface SearchButtonCloseProps {
-	onClick: () => boolean;
+	onClick: () => void;
 	updateInputFocus: () => void;
 }
 

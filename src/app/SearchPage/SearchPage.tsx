@@ -4,7 +4,7 @@ import data from './data';
 import Image from 'next/image';
 
 interface SearchPageProps {
-	onClick: () => boolean;
+	onClick: () => void;
 }
 
 const SearchPage: React.FC<SearchPageProps> = ({ onClick }) => {

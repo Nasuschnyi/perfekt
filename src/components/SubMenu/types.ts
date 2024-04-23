@@ -24,9 +24,6 @@ export interface SubMenuProps {
 		about: {
 			details: CatalogDetails;
 		};
-		contact: {
-			information: Information;
-		};
 	};
 	id: number;
 }
