@@ -6,7 +6,7 @@ type BurgerProps = {
 };
 
 const Burger = ({ setIsActive }: BurgerProps) => {
-	const [isActive, setIsActiveState] = React.useState(false);
+	const [isActive, setIsActiveState] = React.useState<boolean>(false);
 
 	const handleClick = () => {
 		setIsActiveState(!isActive);

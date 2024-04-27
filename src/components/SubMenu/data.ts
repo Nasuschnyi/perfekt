@@ -1,5 +1,3 @@
-import images from '../Main/data';
-
 const data = {
 	catalog: {
 		items: [

@@ -59,15 +59,3 @@
 		width: 2rem;
 	}
 }
-
-@include tablet {
-	.search {
-		&Form {
-			grid-column-start: 1;
-			grid-column-end: 5;
-			grid-row-start: 2;
-			grid-row-end: 3;
-			margin: 0 0 1rem;
-		}
-	}
-}
