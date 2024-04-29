@@ -6,25 +6,25 @@ const data = {
 				title: 'Змішувачі та крани',
 				subList: [
 					{
-						subId: 1,
+						subId: 11,
 						subTitle: 'Змішувачі для ванни та душу',
 						subLink:
 							'https://perfekt.com.ua/index.php?route=product/category&path=206_207_208',
 					},
 					{
-						subId: 2,
+						subId: 12,
 						subTitle: 'Змішувачі для кухні',
 						subLink:
 							'https://perfekt.com.ua/index.php?route=product/category&path=206_207_209',
 					},
 					{
-						subId: 3,
+						subId: 13,
 						subTitle: 'Змішувачі для умивальника',
 						subLink:
 							'https://perfekt.com.ua/index.php?route=product/category&path=206_207_210',
 					},
 					{
-						subId: 4,
+						subId: 14,
 						subTitle: 'Крани',
 						subLink:
 							'https://perfekt.com.ua/index.php?route=product/category&path=206_207_211',
@@ -36,31 +36,31 @@ const data = {
 				title: 'Фітинги пластикові',
 				subList: [
 					{
-						subId: 1,
+						subId: 21,
 						subTitle: 'Вентилі',
 						subLink:
 							'https://perfekt.com.ua/index.php?route=product/category&path=206_212_213',
 					},
 					{
-						subId: 2,
+						subId: 22,
 						subTitle: 'Кути',
 						subLink:
 							'https://perfekt.com.ua/index.php?route=product/category&path=206_212_214',
 					},
 					{
-						subId: 3,
+						subId: 23,
 						subTitle: 'Муфти',
 						subLink:
 							'https://perfekt.com.ua/index.php?route=product/category&path=206_212_216',
 					},
 					{
-						subId: 4,
+						subId: 24,
 						subTitle: 'Різьбовий фітинг',
 						subLink:
 							'https://perfekt.com.ua/index.php?route=product/category&path=206_212_243',
 					},
 					{
-						subId: 5,
+						subId: 25,
 						subTitle: 'Трійники',
 						subLink:
 							'https://perfekt.com.ua/index.php?route=product/category&path=206_212_215',
@@ -72,13 +72,13 @@ const data = {
 				title: 'Шланги',
 				subList: [
 					{
-						subId: 1,
+						subId: 31,
 						subTitle: 'Шланги для підведення води',
 						subLink:
 							'https://perfekt.com.ua/index.php?route=product/category&path=206_217_244',
 					},
 					{
-						subId: 2,
+						subId: 32,
 						subTitle: 'Шланги для підключення змішувача',
 						subLink:
 							'https://perfekt.com.ua/index.php?route=product/category&path=206_217_245',
@@ -90,7 +90,7 @@ const data = {
 				title: 'Унітази',
 				subList: [
 					{
-						subId: 1,
+						subId: 41,
 						subTitle: 'Розумний унітаз біде',
 						subLink:
 							'https://perfekt.com.ua/index.php?route=product/product&path=246&product_id=202',
@@ -102,7 +102,7 @@ const data = {
 				title: 'Решта',
 				subList: [
 					{
-						subId: 1,
+						subId: 51,
 						subTitle: 'Інше',
 						subLink:
 							'https://perfekt.com.ua/index.php?route=product/category&path=206_218',

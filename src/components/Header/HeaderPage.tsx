@@ -14,12 +14,6 @@ import Link from 'next/link';
 import { MdOutlineNearbyError } from 'react-icons/md';
 import { FcLike } from 'react-icons/fc';
 
-interface CatalogItem {
-	title: string;
-	id: number;
-	[key: string]: any;
-}
-
 const HeaderPage = React.memo(() => {
 	const [isBurgerActive, setBurgerActive] = React.useState<boolean>(false);
 	const [isSearchPage, setIsSearchPage] = React.useState<boolean>(false);
@@ -30,21 +24,25 @@ const HeaderPage = React.memo(() => {
 			query: '',
 		}
 	);
+	const searchItems = React.useMemo(
+		() => data.catalog.items.flatMap((item) => item.subList),
+		[data.catalog.items]
+	);
 
 	const sortedItems = React.useMemo(() => {
-		if (filter.sort) {
-			return [...data.catalog.items].sort(
-				(a: CatalogItem, b: CatalogItem) => {
-					return a[filter.sort].localeCompare(b[filter.sort]);
-				}
-			);
+		if (filter.sort in filter) {
+			return searchItems.sort((a, b) => {
+				return (a as any)[filter.sort].localeCompare(
+					(b as any)[filter.sort]
+				);
+			});
 		}
-		return data.catalog.items;
-	}, [filter.sort, data.catalog.items]);
+		return searchItems;
+	}, [filter.sort, searchItems]);
 
-	const searchItems = React.useMemo(() => {
-		return data.catalog.items.filter((item) =>
-			item.title.toLowerCase().includes(filter.query.toLowerCase())
+	const searchedItems = React.useMemo(() => {
+		return searchItems.filter((item) =>
+			item.subTitle.toLowerCase().includes(filter.query.toLowerCase())
 		);
 	}, [filter.query, sortedItems]);
 
@@ -71,16 +69,19 @@ const HeaderPage = React.memo(() => {
 							setFilter={setFilter}
 						/>
 						{filter.query ? (
-							searchItems.length > 0 ? (
+							searchedItems.length > 0 ? (
 								<ul className={style.searchItems}>
-									{searchItems.map((item) => (
-										<li className={style.searchItem}>
+									{searchedItems.map((item) => (
+										<li
+											key={item.subId}
+											className={style.searchItem}
+										>
 											<Link
 												className={style.searchLink}
-												key={item.id}
-												href=""
+												href={item.subLink}
+												target="_blank"
 											>
-												{item.title}
+												{item.subTitle}
 											</Link>
 										</li>
 									))}
