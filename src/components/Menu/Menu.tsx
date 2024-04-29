@@ -22,11 +22,12 @@ const Menu = ({ isBurgerActive }: { isBurgerActive: boolean }) => {
 					>
 						<MenuButton
 							title={item.title}
-							openMenu={() =>
-								selectedItem === item.id
-									? setSelectedItem(null)
-									: setSelectedItem(item.id)
-							}
+							openMenu={() => {
+								setSelectedItem(
+									selectedItem === item.id ? null : item.id
+								);
+								return selectedItem !== item.id;
+							}}
 							isSelected={selectedItem === item.id}
 						/>
 						{selectedItem === item.id && (
