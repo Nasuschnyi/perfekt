@@ -1,4 +1,3 @@
-'use client';
 import React from 'react';
 import SearchButtonClose from '../../Button/SearchButtonClose/SearchButtonClose';
 import style from './Search.module.scss';

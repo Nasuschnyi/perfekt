@@ -40,6 +40,7 @@ const SearchPage: React.FC<SearchPageProps> = ({ onClick }) => {
 		>
 			<Link
 				href={item.link}
+				target="_blank"
 				className={style.asideLink}
 			>
 				{item.title}

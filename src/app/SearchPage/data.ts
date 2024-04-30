@@ -17,14 +17,14 @@ const data = {
 		{
 			id: 3,
 			title: 'Крани',
-			link: '',
+			link: 'https://perfekt.com.ua/index.php?route=product/category&path=206_207_211',
 			img: '/images/main/taps.jpg',
 			alt: 'taps',
 		},
 		{
 			id: 4,
 			title: 'фітинги',
-			link: '',
+			link: 'https://perfekt.com.ua/index.php?route=product/category&path=206_212',
 			img: '/images/main/pipes-connectors.jpg',
 			alt: 'fittings',
 		},

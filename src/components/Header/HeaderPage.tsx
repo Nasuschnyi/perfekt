@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import style from './HeaderPage.module.scss';
 import About from '@/app/About/About';
@@ -26,9 +27,8 @@ const HeaderPage = React.memo(() => {
 	);
 	const searchItems = React.useMemo(
 		() => data.catalog.items.flatMap((item) => item.subList),
-		[data.catalog.items]
+		[]
 	);
-
 	const sortedItems = React.useMemo(() => {
 		if (filter.sort in filter) {
 			return searchItems.sort((a, b) => {
@@ -38,13 +38,13 @@ const HeaderPage = React.memo(() => {
 			});
 		}
 		return searchItems;
-	}, [filter.sort, searchItems]);
+	}, [filter, searchItems]);
 
 	const searchedItems = React.useMemo(() => {
 		return searchItems.filter((item) =>
 			item.subTitle.toLowerCase().includes(filter.query.toLowerCase())
 		);
-	}, [filter.query, sortedItems]);
+	}, [filter, searchItems]);
 
 	const handleSearchClick = React.useCallback(() => {
 		setIsSearchPage(true);

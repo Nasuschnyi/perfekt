@@ -1,5 +1,4 @@
-'use client';
-import { useState } from 'react';
+import React from 'react';
 import style from './Contact.module.scss';
 import data from './data';
 import { IoCloseOutline } from 'react-icons/io5';
@@ -8,7 +7,7 @@ import { FaPhone, FaPhoneFlip } from 'react-icons/fa6';
 import { IoMdMail } from 'react-icons/io';
 
 export default function Contact() {
-	const [isOpen, setIsOpen] = useState(false);
+	const [isOpen, setIsOpen] = React.useState(false);
 
 	const handleToggle = () => {
 		setIsOpen((prevIsOpen) => !prevIsOpen);

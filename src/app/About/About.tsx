@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React from 'react';
 import style from './About.module.scss';
 import data from './data';
 import { IoCloseOutline, IoTime } from 'react-icons/io5';
@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { FaLocationDot } from 'react-icons/fa6';
 
 export default function About() {
-	const [isOpen, setIsOpen] = useState(false);
+	const [isOpen, setIsOpen] = React.useState(false);
 
 	const handleToggle = () => {
 		setIsOpen((prevIsOpen) => !prevIsOpen);

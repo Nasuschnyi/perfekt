@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
 	title: 'Конфіденційність',
-	description: 'Конфіденційність',
+	description: 'Політика конфіденційності',
 };
 
 export default function RootLayout({
