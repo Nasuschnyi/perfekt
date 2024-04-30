@@ -3,7 +3,7 @@ const data = {
 		{
 			id: 1,
 			title: 'шланги',
-			link: '',
+			link: 'https://perfekt.com.ua/index.php?route=product/category&path=206_217',
 			img: '/images/main/hoses.jpg',
 			alt: 'hoses',
 		},

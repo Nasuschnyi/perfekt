@@ -17,6 +17,7 @@ const SearchPage: React.FC<SearchPageProps> = ({ onClick }) => {
 			<Link
 				className={style.contentLink}
 				href={item.link}
+				target="_blank"
 			>
 				<figure className={style.contentFigure}>
 					<Image
