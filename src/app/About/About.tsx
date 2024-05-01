@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { FaLocationDot } from 'react-icons/fa6';
 
 export default function About() {
-	const [isOpen, setIsOpen] = React.useState(false);
+	const [isOpen, setIsOpen] = React.useState<boolean>(false);
 
 	const handleToggle = () => {
 		setIsOpen((prevIsOpen) => !prevIsOpen);
@@ -20,6 +20,20 @@ export default function About() {
 	const handleListClick = (e: React.MouseEvent) => {
 		e.stopPropagation();
 	};
+
+	React.useEffect(() => {
+		const handleClickOutside = (e: MouseEvent) => {
+			if (isOpen && !(e.target as Element).closest(`.${style.list}`)) {
+				setIsOpen(false);
+			}
+		};
+
+		document.addEventListener('click', handleClickOutside);
+
+		return () => {
+			document.removeEventListener('click', handleClickOutside);
+		};
+	}, [isOpen]);
 
 	return (
 		<>

@@ -1,15 +1,15 @@
-@import "../../../../styles/variables.scss";
+@import '../../../../styles/variables.scss';
 
 .close {
 	@extend %flex;
 	width: 2.875rem;
 	border-radius: 50%;
 	padding: 0.5rem;
-	background: map-get($color, "primary");
+	background: map-get($color, 'primary');
 	margin: 0 0 0 0.5rem;
 
 	svg {
-		fill: map-get($color, "dark");
+		fill: map-get($color, 'dark');
 		height: 100%;
 		width: 100%;
 	}
@@ -19,7 +19,7 @@
 		@extend %transition;
 
 		& svg {
-			fill: map-get($color, "red");
+			fill: map-get($color, 'red');
 			@extend %transition;
 		}
 	}

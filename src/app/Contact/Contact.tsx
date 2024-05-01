@@ -22,6 +22,20 @@ export default function Contact() {
 		e.stopPropagation();
 	};
 
+	React.useEffect(() => {
+		const handleClickOutside = (e: MouseEvent) => {
+			if (isOpen && !(e.target as Element).closest(`.${style.list}`)) {
+				setIsOpen(false);
+			}
+		};
+
+		document.addEventListener('click', handleClickOutside);
+
+		return () => {
+			document.removeEventListener('click', handleClickOutside);
+		};
+	}, [isOpen]);
+
 	return (
 		<>
 			<button

@@ -20,6 +20,7 @@ const Search: React.FC<SearchProps> = ({
 	setFilter,
 }) => {
 	const [searchQuery, setSearchQuery] = React.useState('');
+	const inputRef = React.useRef<HTMLInputElement>(null);
 	const [isInputFocused, setIsInputFocused] = React.useState<boolean>(false);
 
 	const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -37,6 +38,7 @@ const Search: React.FC<SearchProps> = ({
 			query: '',
 			sort: prevFilter.sort,
 		}));
+		handleInputFocus();
 	};
 
 	const handleFormClick = () => {
@@ -51,6 +53,11 @@ const Search: React.FC<SearchProps> = ({
 		}));
 	};
 
+	const handleResetClick = () => {
+		handleClearSearch();
+		inputRef.current?.focus();
+	};
+
 	return (
 		<form
 			className={style.searchForm}
@@ -58,6 +65,7 @@ const Search: React.FC<SearchProps> = ({
 		>
 			{!searchQuery && <FiSearch className={style.searchIcon} />}
 			<input
+				ref={inputRef}
 				className={style.search}
 				type="text"
 				value={searchQuery || filter.query}
@@ -71,7 +79,7 @@ const Search: React.FC<SearchProps> = ({
 			{searchQuery && (
 				<button
 					className={style.reset}
-					onClick={handleClearSearch}
+					onClick={handleResetClick}
 				>
 					<IoCloseOutline />
 				</button>
