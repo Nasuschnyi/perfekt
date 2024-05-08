@@ -1,12 +1,19 @@
 import { ImCheckmark } from 'react-icons/im';
 import style from './Title.module.scss';
+import Link from 'next/link';
 
 export default function Title() {
 	return (
 		<>
 			<h1 className={style.slogan}>
-				<strong className={style.title}>Perfekt</strong> Ваш надійний
-				магазин сантехніки!
+				<Link
+					href="https://perfekt.com.ua"
+					target="_blank"
+					className={style.title}
+				>
+					Perfekt
+				</Link>{' '}
+				Ваш надійний магазин сантехніки!
 			</h1>
 			<ul className={style.list}>
 				<li className={style.item}>
