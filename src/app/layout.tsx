@@ -2,8 +2,9 @@ import type { Metadata } from 'next';
 import '../styles/globals.css';
 
 export const metadata: Metadata = {
-	title: 'Perfekt',
-	description: 'Онлайн магазин',
+	title: 'Perfekt сантехніка',
+	description:
+		'Інтернет-магазин сантехніки, онлайн-магазин сантехніки, змішувачі, крани, шланги, аксесуари для ванної кімнати, фітинги, розумного унітазу біде та інше',
 };
 
 export default function RootLayout({
