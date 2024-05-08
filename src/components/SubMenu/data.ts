@@ -7,63 +7,60 @@ const data = {
 				subList: [
 					{
 						subId: 11,
-						subTitle: 'Змішувачі для ванни та душу',
+						subTitle: 'Універсальні (супутні)',
 						subLink:
-							'https://perfekt.com.ua/index.php?route=product/category&path=206_207_208',
+							'https://perfekt.com.ua/universalnye-soputstvuyushie/',
 					},
 					{
 						subId: 12,
-						subTitle: 'Змішувачі для кухні',
-						subLink:
-							'https://perfekt.com.ua/index.php?route=product/category&path=206_207_209',
+						subTitle: 'Для ванни та душу',
+						subLink: 'https://perfekt.com.ua/dlya-vanny-i-dusha/',
 					},
 					{
 						subId: 13,
-						subTitle: 'Змішувачі для умивальника',
-						subLink:
-							'https://perfekt.com.ua/index.php?route=product/category&path=206_207_210',
+						subTitle: 'Для кухні',
+						subLink: 'https://perfekt.com.ua/dlya-kuhni/',
 					},
 					{
 						subId: 14,
+						subTitle: 'Для умивальника',
+						subLink: 'https://perfekt.com.ua/dlya-umyvalnika/',
+					},
+					{
+						subId: 15,
 						subTitle: 'Крани',
-						subLink:
-							'https://perfekt.com.ua/index.php?route=product/category&path=206_207_211',
+						subLink: 'https://perfekt.com.ua/krany/',
 					},
 				],
 			},
 			{
 				id: 2,
-				title: 'Фітинги пластикові',
+				title: 'Фітинги',
 				subList: [
 					{
 						subId: 21,
 						subTitle: 'Вентилі',
-						subLink:
-							'https://perfekt.com.ua/index.php?route=product/category&path=206_212_213',
+						subLink: 'https://perfekt.com.ua/ventili/',
 					},
 					{
 						subId: 22,
 						subTitle: 'Кути',
-						subLink:
-							'https://perfekt.com.ua/index.php?route=product/category&path=206_212_214',
+						subLink: 'https://perfekt.com.ua/kuti/',
 					},
 					{
 						subId: 23,
 						subTitle: 'Муфти',
-						subLink:
-							'https://perfekt.com.ua/index.php?route=product/category&path=206_212_216',
+						subLink: 'https://perfekt.com.ua/mufti/',
 					},
 					{
 						subId: 24,
-						subTitle: 'Різьбовий фітинг',
-						subLink:
-							'https://perfekt.com.ua/index.php?route=product/category&path=206_212_243',
+						subTitle: 'Різьбові фітинги',
+						subLink: 'https://perfekt.com.ua/rizbovi-fitingi/',
 					},
 					{
 						subId: 25,
 						subTitle: 'Трійники',
-						subLink:
-							'https://perfekt.com.ua/index.php?route=product/category&path=206_212_215',
+						subLink: 'https://perfekt.com.ua/trijniki/',
 					},
 				],
 			},
@@ -74,14 +71,12 @@ const data = {
 					{
 						subId: 31,
 						subTitle: 'Шланги для підведення води',
-						subLink:
-							'https://perfekt.com.ua/index.php?route=product/category&path=206_217_244',
+						subLink: 'https://perfekt.com.ua/dlya-podvodki-vody/',
 					},
 					{
 						subId: 32,
 						subTitle: 'Шланги для підключення змішувача',
-						subLink:
-							'https://perfekt.com.ua/index.php?route=product/category&path=206_217_245',
+						subLink: 'https://perfekt.com.ua/dlya-smesitelya/',
 					},
 				],
 			},
@@ -92,20 +87,33 @@ const data = {
 					{
 						subId: 41,
 						subTitle: 'Розумний унітаз біде',
-						subLink:
-							'https://perfekt.com.ua/index.php?route=product/product&path=246&product_id=202',
+						subLink: 'https://perfekt.com.ua/unitazi/',
 					},
 				],
 			},
 			{
 				id: 5,
-				title: 'Решта',
+				title: 'Аксесуари для ванної кімнати',
 				subList: [
 					{
 						subId: 51,
 						subTitle: 'Інше',
-						subLink:
-							'https://perfekt.com.ua/index.php?route=product/category&path=206_218',
+						subLink: 'https://perfekt.com.ua/raznoe/',
+					},
+					{
+						subId: 52,
+						subTitle: 'Кріплення',
+						subLink: 'https://perfekt.com.ua/krepezhi/',
+					},
+					{
+						subId: 53,
+						subTitle: 'Лійки',
+						subLink: 'https://perfekt.com.ua/lejki/',
+					},
+					{
+						subId: 54,
+						subTitle: 'Шланги для душу',
+						subLink: 'https://perfekt.com.ua/shlang-dlya-dusha/',
 					},
 				],
 			},
