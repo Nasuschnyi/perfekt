@@ -7,23 +7,23 @@ const data = {
 				subList: [
 					{
 						subId: 11,
-						subTitle: 'Універсальні (супутні)',
+						subTitle: 'Термостатичний клапан',
 						subLink:
 							'https://perfekt.com.ua/universalnye-soputstvuyushie/',
 					},
 					{
 						subId: 12,
-						subTitle: 'Для ванни та душу',
+						subTitle: 'Змішувачі для ванни та душу',
 						subLink: 'https://perfekt.com.ua/dlya-vanny-i-dusha/',
 					},
 					{
 						subId: 13,
-						subTitle: 'Для кухні',
+						subTitle: 'Змішувачі для кухні',
 						subLink: 'https://perfekt.com.ua/dlya-kuhni/',
 					},
 					{
 						subId: 14,
-						subTitle: 'Для умивальника',
+						subTitle: 'Змішувачі для умивальника',
 						subLink: 'https://perfekt.com.ua/dlya-umyvalnika/',
 					},
 					{
@@ -93,7 +93,7 @@ const data = {
 			},
 			{
 				id: 5,
-				title: 'Аксесуари для ванної кімнати',
+				title: 'Аксесуари для ванної',
 				subList: [
 					{
 						subId: 51,
