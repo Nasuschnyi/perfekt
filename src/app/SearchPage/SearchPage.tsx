@@ -18,6 +18,7 @@ const SearchPage: React.FC<SearchPageProps> = ({ onClick }) => {
 				className={style.contentLink}
 				href={item.link}
 				target="_blank"
+				rel="noopener noreferrer"
 			>
 				<figure className={style.contentFigure}>
 					<Image
@@ -41,6 +42,7 @@ const SearchPage: React.FC<SearchPageProps> = ({ onClick }) => {
 			<Link
 				href={item.link}
 				target="_blank"
+				rel="noopener noreferrer"
 				className={style.asideLink}
 			>
 				{item.title}

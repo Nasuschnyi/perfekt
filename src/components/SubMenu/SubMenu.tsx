@@ -47,6 +47,7 @@ const SubMenu: React.FC<SubMenuProps> = ({ data, id }) => {
 												}
 												className={style.nestedSubLink}
 												target="_blank"
+												rel="noopener noreferrer"
 											>
 												{subItem.subTitle}
 											</Link>
@@ -70,6 +71,7 @@ const SubMenu: React.FC<SubMenuProps> = ({ data, id }) => {
 							className={style.aboutLink}
 							target="_blank"
 							href="https://perfekt.com.ua"
+							rel="noopener noreferrer"
 						>
 							Perfekt.com.ua
 						</Link>
