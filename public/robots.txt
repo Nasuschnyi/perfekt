@@ -7,6 +7,3 @@ Host: https://www.perfekt-plumb.com/
 
 # Sitemaps
 Sitemap: https://www.perfekt-plumb.com/sitemap.xml
-
-
-google-site-verification=4O18LnTdQMyNriZRQv_QCkAHlZ7UvR1U8Znw86a53aQ

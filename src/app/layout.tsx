@@ -15,6 +15,11 @@ export default function RootLayout({
 	return (
 		<html lang="uk">
 			<head>
+				<link
+					rel="icon"
+					href="/favicon.ico"
+					sizes="any"
+				/>
 				<meta
 					name="theme-color"
 					content="#002d18"
