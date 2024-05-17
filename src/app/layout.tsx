@@ -32,6 +32,7 @@ export default function RootLayout({
 				/>
 			</Head>
 			<body>
+				{/* Google tag (gtag.js) */}
 				<Script
 					strategy="lazyOnload"
 					src="https://www.googletagmanager.com/gtag/js?id=AW-16565936038"
