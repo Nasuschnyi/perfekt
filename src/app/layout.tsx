@@ -1,5 +1,10 @@
-import type { Metadata } from 'next';
+import { Metadata } from 'next';
 import '../styles/globals.css';
+import Head from 'next/head';
+
+interface CustomWindow extends Window {
+	dataLayer: any[];
+}
 
 export const metadata: Metadata = {
 	title: 'PERFEKT | Сантехніка',
@@ -12,9 +17,12 @@ export default function RootLayout({
 }: Readonly<{
 	children: React.ReactNode;
 }>) {
+	const customWindow = Object.assign(window, {
+		dataLayer: [],
+	}) as CustomWindow;
 	return (
 		<html lang="uk">
-			<head>
+			<Head>
 				<link
 					rel="icon"
 					href="/favicon.ico"
@@ -28,7 +36,16 @@ export default function RootLayout({
 					name="google-site-verification"
 					content="4O18LnTdQMyNriZRQv_QCkAHlZ7UvR1U8Znw86a53aQ"
 				/>
-			</head>
+				<script
+					async
+					src="https://www.googletagmanager.com/gtag/js?id=AW-16565936038"
+				></script>
+				<script>
+					customWindow.dataLayer = customWindow.dataLayer || [];
+					function gtag(){customWindow.dataLayer.push(arguments)}
+					gtag('js', new Date()); gtag('config', 'AW-16565936038');
+				</script>
+			</Head>
 			<body>{children}</body>
 		</html>
 	);
