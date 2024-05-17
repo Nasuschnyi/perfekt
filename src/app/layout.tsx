@@ -49,6 +49,15 @@ export default function RootLayout({
 						gtag('config', 'AW-16565936038');
 					`}
 				</Script>
+				{/* Event snippet for Перегляд сторінки conversion page */}
+				<Script id="conversion-page">
+					{`gtag('event', 'conversion', {
+							'send_to': 'AW-16565936038/i6VGCKb8468ZEKa_oNs9',
+							'value': 1.0,
+							'currency': 'UAH'
+						});`}
+				</Script>
+
 				{children}
 			</body>
 		</html>
