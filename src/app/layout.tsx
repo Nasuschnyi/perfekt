@@ -1,10 +1,7 @@
-import { Metadata } from 'next';
+import type { Metadata } from 'next';
 import '../styles/globals.css';
 import Head from 'next/head';
-
-interface CustomWindow extends Window {
-	dataLayer: any[];
-}
+import Script from 'next/script';
 
 export const metadata: Metadata = {
 	title: 'PERFEKT | Сантехніка',
@@ -17,9 +14,6 @@ export default function RootLayout({
 }: Readonly<{
 	children: React.ReactNode;
 }>) {
-	const customWindow = Object.assign(window, {
-		dataLayer: [],
-	}) as CustomWindow;
 	return (
 		<html lang="uk">
 			<Head>
@@ -36,17 +30,26 @@ export default function RootLayout({
 					name="google-site-verification"
 					content="4O18LnTdQMyNriZRQv_QCkAHlZ7UvR1U8Znw86a53aQ"
 				/>
-				<script
-					async
-					src="https://www.googletagmanager.com/gtag/js?id=AW-16565936038"
-				></script>
-				<script>
-					customWindow.dataLayer = customWindow.dataLayer || [];
-					function gtag(){customWindow.dataLayer.push(arguments)}
-					gtag('js', new Date()); gtag('config', 'AW-16565936038');
-				</script>
 			</Head>
-			<body>{children}</body>
+			<body>
+				<Script
+					strategy="lazyOnload"
+					src="https://www.googletagmanager.com/gtag/js?id=AW-16565936038"
+				></Script>
+				<Script
+					id="google-analytics"
+					strategy="lazyOnload"
+				>
+					{`
+						window.dataLayer = window.dataLayer || [];
+						function gtag(){dataLayer.push(arguments);}
+						gtag('js', new Date());
+					
+						gtag('config', 'AW-16565936038');
+					`}
+				</Script>
+				{children}
+			</body>
 		</html>
 	);
 }
