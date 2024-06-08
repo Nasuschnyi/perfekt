@@ -117,6 +117,17 @@ const data = {
 					},
 				],
 			},
+			{
+				id: 6,
+				title: 'Зарядні стації',
+				subList: [
+					{
+						subId: 61,
+						subTitle: 'Електростанції та портативні зарядні стації',
+						subLink: 'https://perfekt.com.ua/zaryadnye-stancii/',
+					},
+				],
+			},
 		],
 	},
 	about: {

@@ -4,7 +4,7 @@ import Head from 'next/head';
 import Script from 'next/script';
 
 export const metadata: Metadata = {
-	title: 'PERFEKT | Сантехніка',
+	title: 'PERFEKT | Сантехніка, Зарядні стації',
 	description:
 		'Інтернет-магазин сантехніки, Україна, доставка по всій Україні,онлайн-магазин сантехніки, змішувачі, крани, шланги, аксесуари для ванної кімнати, фітинги, розумного унітазу біде та інше',
 };
