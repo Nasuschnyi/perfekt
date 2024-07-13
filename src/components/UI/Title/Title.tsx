@@ -24,11 +24,14 @@ export default function Title() {
 				</li>{' '}
 				<li className={style.item}>
 					<ImCheckmark />
-					Ми пропонуємо все, від <strong>змішувачів та кранів</strong>
-					, <strong>шлангів</strong>,{' '}
+					Ми пропонуємо все, від <strong>змішувачів</strong> та{' '}
+					<strong>кранів</strong>, <strong>шлангів</strong>,{' '}
 					<strong>аксесуарів для ванної кімнати</strong>,{' '}
-					<strong>фітингів</strong> до{' '}
-					<strong>розумного унітазу біде</strong> та інше.
+					<strong>фітингів до розумного унітазу біде</strong> ,{' '}
+					<strong>зарядних станцій</strong>,{' '}
+					<strong>портативних зарядних станцій</strong>,{' '}
+					<strong>павербанків</strong>, <strong>генераторів</strong>{' '}
+					та <strong>інше</strong>.
 				</li>{' '}
 				<li className={style.item}>
 					<ImCheckmark />

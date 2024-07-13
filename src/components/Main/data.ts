@@ -1,43 +1,43 @@
 const images = [
 	{
 		id: 1,
-		src: '/images/main/lavatory.jpg',
+		src: '/images/main/lavatory-1.jpg',
 		alt: 'lavatory',
 	},
 	{
 		id: 2,
-		src: '/images/main/taps.jpg',
-		alt: 'hoses',
+		src: '/images/main/charging-station-2.jpg',
+		alt: 'charging-station',
 	},
 	{
 		id: 3,
-		src: '/images/main/other.jpg',
-		alt: 'other',
+		src: '/images/main/generator.jpg',
+		alt: 'generator',
 	},
 	{
 		id: 4,
-		src: '/images/main/charging-stations.jpg',
-		alt: 'charging stations',
+		src: '/images/main/generator-1.jpg',
+		alt: 'generator',
 	},
 	{
 		id: 5,
-		src: '/images/main/hoses.jpg',
-		alt: 'taps',
+		src: '/images/main/charging-station-1.jpg',
+		alt: 'charging-station',
 	},
 	{
 		id: 6,
-		src: '/images/main/pipes-connectors.jpg',
-		alt: 'pipes and connectors',
+		src: '/images/main/power-bank.jpg',
+		alt: 'power-bank',
 	},
-	{
+	/* {
 		id: 7,
 		src: '/images/main/plastic-fittings.jpg',
 		alt: 'plastic fittings',
 	},
 	{
 		id: 8,
-		src: '/images/main/fittings.jpg',
-		alt: 'fittings',
+		src: '/images/main/taps.jpg',
+		alt: 'taps',
 	},
 	{
 		id: 9,
@@ -46,14 +46,14 @@ const images = [
 	},
 	{
 		id: 10,
-		src: '/images/main/hoses-connectors.jpg',
+		src: '/images/main/hoses.jpg',
 		alt: 'hoses and connectors',
 	},
 	{
 		id: 11,
 		src: '/images/main/plastic-fittings-2.jpg',
 		alt: 'hoses and connectors',
-	},
+	}, */
 ];
 
 export default images;

@@ -1,0 +1,10 @@
+@import '../../../styles/variables.scss';
+
+.slider {
+	margin: auto;
+	height: 22.5rem;
+	max-width: 40rem;
+	border-radius: 1rem;
+	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.8);
+	overflow: hidden;
+}
