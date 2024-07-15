@@ -11,7 +11,7 @@ const data = {
 			id: 2,
 			title: 'Зарядні стації',
 			link: 'https://perfekt.com.ua/zaryadnye-stancii/',
-			img: '/images/main/charging-stations.jpg',
+			img: '/images/main/charging-station-2.jpg',
 			alt: 'charging stations',
 		},
 		{
